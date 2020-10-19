@@ -1,10 +1,8 @@
 /* -------------------------------- 
-
 File#: _2_flexi-header
 Title: Flexi Header
 Descr: Customizable header template
 Usage: codyhouse.co/license
-
 -------------------------------- */
 
 :root {
@@ -65,7 +63,9 @@ Usage: codyhouse.co/license
   padding: 0 0 var(--space-md);
   background-color: var(--color-bg);
   box-shadow: var(--shadow-md);
-  font-size: var(--text-md); // edit font size of all nav elements
+  //font-size: var(--text-md); // edit font size of all nav elements
+  font-size: 0.9em;
+  font-weight: 500;
   z-index: 1;
 
   visibility: hidden;
@@ -153,7 +153,9 @@ Usage: codyhouse.co/license
 
     // new style
     height: var(--f-header-height);
-    font-size: 0.875em; // edit font size of all nav elements
+    //font-size: 0.875em; // edit font size of all nav elements
+    font-size: 0.75em;
+    font-weight: 500;
 
     &::before { // reset
       display: none;
@@ -210,6 +212,7 @@ Usage: codyhouse.co/license
   }
 
   .f-header__dropdown {
+    //font-size: 1rem;
     font-size: 1rem;
     position: absolute;
     top: 100%;
