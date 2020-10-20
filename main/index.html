@@ -1,17 +1,107 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <title>Công ty Thế Hiển | Cung Cấp - Thiết kế &amp; Thi công Nhôm Kính</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/navbarcss.css">
   <!-- browsers not supporting CSS variables -->
   <script>
     if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
   </script>
-  <title>Get Started | CodyFrame</title>
 </head>
 <body>
+
+  <header class="cd-main-header">
+		<a class="cd-logo" href="#0"><img src="img/cd-logo.svg" alt="Logo"></a>
+		<ul class="cd-header-buttons">
+			<li><a class="cd-nav-trigger" href="#cd-primary-nav">Menu<span></span></a></li>
+		</ul> <!-- cd-header-buttons -->
+	</header>
+
+	<nav class="cd-nav">
+		<ul id="cd-primary-nav" class="cd-primary-nav">
+			<li><a class="active" href="#0">TRANG CHỦ</a></li>
+			<li><a href="#0">GIỚI THIỆU</a></li>
+			
+			<li class="has-children">
+				<a href="#0">SẢN PHẨM</a>
+				<ul class="cd-secondary-nav is-hidden">
+					<li class="go-back"><a href="#0">Sản Phẩm</a></li>
+					<li class="has-children">
+						<a href="#">SẢN PHẨM 1</a>
+						<ul class="is-hidden">
+							<li class="go-back"><a href="#0">SẢN PHẨM 1</a></li>
+							<li><a href="#">SẢN PHẨM 1.1</a></li>
+							<li><a href="#">SẢN PHẨM 1.2</a></li>
+							<li><a href="#">SẢN PHẨM 1.3</a></li>
+							<li><a href="#">SẢN PHẨM 1.4</a></li>
+						</ul>
+					</li>
+					<li class="has-children">
+						<a href="#">SẢN PHẨM 2</a>
+						<ul class="is-hidden">
+							<li class="go-back"><a href="#0">SẢN PHẨM 2</a></li>
+							<li><a href="#">SẢN PHẨM 2.1</a></li>
+							<li><a href="#">SẢN PHẨM 2.2</a></li>
+							<li><a href="#">SẢN PHẨM 2.3</a></li>
+							<li><a href="#">SẢN PHẨM 2.4</a></li>
+						</ul>
+					</li>
+					<li class="has-children">
+						<a href="#">SẢN PHẨM 3</a>
+						<ul class="is-hidden">
+							<li class="go-back"><a href="#0">SẢN PHẨM 3</a></li>
+							<li><a href="#">SẢN PHẨM 3.1</a></li>
+							<li><a href="#">SẢN PHẨM 3.2</a></li>
+							<li><a href="#">SẢN PHẨM 3.3</a></li>
+							<li><a href="#">SẢN PHẨM 3.4</a></li>
+							<li><a href="#">SẢN PHẨM 3.5</a></li>
+						</ul>
+					</li>
+					<li class="has-children">
+						<a href="#">SẢN PHẨM 4</a>
+						<ul class="is-hidden">
+							<li class="go-back"><a href="#0">SẢN PHẨM 4</a></li>
+							<li><a href="#">SẢN PHẨM 4.1</a></li>
+							<li><a href="#">SẢN PHẨM 4.2</a></li>
+							<li><a href="#">SẢN PHẨM 4.3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+
+			<li class="has-children">
+				<a href="#">DỰ ÁN</a>
+				<ul class="cd-nav-gallery is-hidden">
+					<li class="go-back"><a href="#0">DỰ ÁN</a></li>
+					<li>
+						<a class="cd-nav-item" href="#0">
+							<img src="img/img.jpg" alt="Product Image">
+							<h3>CÔNG TRÌNH CÔNG NGHIỆP</h3>
+						</a>
+					</li>
+
+					<li>
+						<a class="cd-nav-item" href="#0">
+							<img src="img/img.jpg" alt="Product Image">
+							<h3>BIỆT THỰ NHÀ PHỐ</h3>
+						</a>
+					</li>
+				</ul>
+			</li>
+
+			<li><a href="#">TIN TỨC</a></li>
+			<li><a href="#">LIÊN HỆ</a></li>
+		</ul>
+	</nav>
+
+	<main class="cd-main-content">
+		<div class="cd-overlay"></div>
+	</main>
+
   <header class="f-header position-relative js-f-header">
     <div class="f-header__mobile-content container max-width-lg">
       <a href="#0" class="f-header__logo">
@@ -281,5 +371,8 @@
   </footer>
 
   <script src="assets/js/scripts.js"></script>
+  <script src="js/jquery-2.1.1.js"></script>
+  <script src="js/jquery.mobile.custom.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
