@@ -119,11 +119,13 @@ Main components
 
 .cd-logo {
   position: absolute;
-  top: 12px;
-  left: 5%;
+  top: 10px;
+  left: 20%;
 }
 .cd-logo img {
   display: block;
+  width: 120px;
+  height: 45px;
 }
 @media only screen and (max-width: 1169px) {
   .nav-on-left .cd-logo {
@@ -133,7 +135,13 @@ Main components
 }
 @media only screen and (min-width: 1170px) {
   .cd-logo {
-    top: 26px;
+    top: 18px;
+    left: 10em;
+  }
+}
+@media only screen and (max-width: 1169px) {
+  .cd-logo {
+    top: 2px;
     left: 4em;
   }
 }
@@ -603,11 +611,13 @@ Main components
   .cd-primary-nav .cd-secondary-nav, .cd-primary-nav .cd-nav-gallery, .cd-primary-nav .cd-nav-icons {
     /* dropdown menu style */
     position: absolute;
+    right: 20px;
     top: 80px;
     /* width: 100vw; */
-    width: 75vw;
+    width: 68vw;
     background: #ffffff;
-    padding: 48px 64px 130px;
+    /* padding: 48px 64px 130px; */
+    padding: 25px 20px;
     box-shadow: inset 0 1px 0 #e2e3df, 0 3px 6px rgba(0, 0, 0, 0.05);
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
@@ -669,13 +679,13 @@ Main components
   }
   .cd-primary-nav .cd-secondary-nav > li {
     /* change the height according to your needs - you can even set height: auto */
-    height: 280px;
+    min-height: 220px;
     /* here you set the number of columns - use width percentage */
-    width: 23%;
+    width: 25%;
     float: left;
     text-align: center;
-    margin-right: 2.66%;
-    /* border-right: 1px solid #e2e3df; */
+    /* margin-right: 2.66%; */
+    border-right: 1px solid #e2e3df;
     overflow: hidden;
     overflow-x: hidden;
     overflow-y: auto;
@@ -684,7 +694,10 @@ Main components
   .cd-primary-nav .cd-secondary-nav > li:nth-child(4n+2) {
     /* +2 because we have 2 list items with display:none */
     margin-right: 0;
-    border-right: none;
+    /* border-right: none; */
+  }
+  .lastChild {
+    border-right: none !important;
   }
   .cd-primary-nav .cd-secondary-nav > li > a {
     /* secondary nav title */
@@ -692,11 +705,12 @@ Main components
     font-weight: bold;
     font-size: 1.6rem;
     margin-bottom: .6em;
+    text-align: center;
   }
   .cd-primary-nav .cd-secondary-nav a {
     height: 30px;
     line-height: 30px;
-    padding: 0 18% 0 0;
+    /* padding: 0 18% 0 0; */
     color: #2e3233;
     border-bottom: none;
     font-size: 1.4rem;
@@ -746,9 +760,9 @@ Main components
   }
   .cd-primary-nav .cd-nav-gallery li {
     /* set here number of columns - use width percentage */
-    width: 33%;
+    width: 35%;
     float: left;
-    margin: 0 4% 40px 0;
+    /* margin: 0 4% 40px 0; */
   }
   .cd-primary-nav .cd-nav-gallery li:nth-child(4n+2) {
     /* +2 because we have two additional list items with display:none */
@@ -1046,9 +1060,7 @@ Main components
 }
 
 /* -------------------------------- 
-
 support for no js 
-
 -------------------------------- */
 .no-js .cd-primary-nav {
   position: relative;
@@ -1065,7 +1077,7 @@ support for no js
   opacity: 1;
   visibility: visible;
 }
-
+/*1170px*/
 @media only screen and (min-width: 1170px) {
   .no-js .cd-primary-nav {
     position: absolute;
