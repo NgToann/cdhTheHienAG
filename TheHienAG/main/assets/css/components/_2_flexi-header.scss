@@ -150,7 +150,8 @@ Usage: codyhouse.co/license
       max-height: none;
       overflow: visible;
       overscroll-behavior: auto;
-  
+      text-transform: uppercase;
+      
       // new style
       height: var(--f-header-height);
       font-size: 0.875em; // edit font size of all nav elements
@@ -215,8 +216,8 @@ Usage: codyhouse.co/license
       font-size: 1rem;
       position: absolute;
       top: 100%;
-      width: 200px;
-      left: calc(50% - 100px);
+      width: 250px;
+      // left: calc(50% - 100px);
       padding: var(--space-xxxs) 0;
       background-color: var(--color-bg);
       // border-radius: var(--radius-sm);
@@ -258,4 +259,9 @@ Usage: codyhouse.co/license
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  .contact-group span, .contact-group svg {
+    color: orangered !important;
+    text-shadow: var(--shadow-md);
   }

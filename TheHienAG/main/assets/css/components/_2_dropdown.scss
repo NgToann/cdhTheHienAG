@@ -12,19 +12,16 @@ Usage: codyhouse.co/license
   .dropdown {
     position: relative;
   }
-  
-  .dropdown__wrapper a span {
-      color: red !important;
-      text-decoration: none;
-      text-overflow: ellipsis;
+  a {
+    text-decoration: none !important;
+    color: inherit;
   }
-
   .dropdown__menu {
-    width: 200px;
-    border-radius: var(--radius-md);
+    width: 250px;
+    // border-radius: var(--radius-md);
     padding: var(--space-xxs) 0;
     background-color: var(--color-bg);
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--shadow-md);
     z-index: var(--zindex-popover);
     position: absolute;
     left: 0;

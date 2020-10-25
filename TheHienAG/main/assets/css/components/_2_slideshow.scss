@@ -42,7 +42,7 @@ Usage: codyhouse.co/license
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-  
+    
     &:focus {
       outline: none;
     }
@@ -84,7 +84,7 @@ Usage: codyhouse.co/license
       left: 0;
       width: 100%;
       visibility: hidden;
-      //min-height: calc(100vh - var(--f-header-height)) !important;
+      min-height: calc(100vh - var(--f-header-height)) !important;
     }
   
     .slideshow__item--selected {

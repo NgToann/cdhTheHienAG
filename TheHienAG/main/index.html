@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
-  <link id="codyframe" rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <!-- browsers not supporting CSS variables -->
   <script>
     if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
@@ -17,7 +17,8 @@
     <header class="f-header position-relative js-f-header">
       <div class="f-header__mobile-content container max-width-lg">
         <a href="#0" class="f-header__logo">
-          <svg width="104" height="30" viewBox="0 0 104 30"><title>Go to homepage</title><path d="M37.54 24.08V3.72h4.92v16.37h8.47v4zM60.47 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8 8 0 015.64-2.18 8.07 8.07 0 015.68 2.2 8.49 8.49 0 012 5.69 8.63 8.63 0 01-1.78 5.38 7.6 7.6 0 01-5.89 2.49zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.79 3-2.79 4.26.32 4.23 2.82 4.23zM95.49 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8.4 8.4 0 0111.31 0 8.43 8.43 0 012 5.69 8.6 8.6 0 01-1.77 5.38 7.6 7.6 0 01-5.89 2.51zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.8 3-2.8 4.26.31 4.23 2.83 4.23zM77.66 30c-5.74 0-7-3.25-7.23-4.52l4.6-.26c.41.91 1.17 1.41 2.76 1.41a2.45 2.45 0 002.82-2.53v-2.68a7 7 0 01-1.7 1.75 6.12 6.12 0 01-5.85-.08c-2.41-1.37-3-4.25-3-6.66 0-.89.12-3.67 1.45-5.42a5.67 5.67 0 014.64-2.4c1.2 0 3 .25 4.46 2.82V8.81h4.85v15.33a5.2 5.2 0 01-2.12 4.32A9.92 9.92 0 0177.66 30zm.15-9.66c2.53 0 2.81-2.69 2.81-3.91s-.31-4-2.81-4-2.81 2.8-2.81 4 .27 3.91 2.81 3.91zM55.56 3.72h9.81v2.41h-9.81z" fill="var(--color-contrast-higher)"/><circle cx="15" cy="15" r="15" fill="var(--color-primary)"/></svg>
+          <img src="assets/img/logo/thehienlogo.jpg"/>
+          <!-- <svg width="104" height="30" viewBox="0 0 104 30"><title>Go to homepage</title><path d="M37.54 24.08V3.72h4.92v16.37h8.47v4zM60.47 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8 8 0 015.64-2.18 8.07 8.07 0 015.68 2.2 8.49 8.49 0 012 5.69 8.63 8.63 0 01-1.78 5.38 7.6 7.6 0 01-5.89 2.49zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.79 3-2.79 4.26.32 4.23 2.82 4.23zM95.49 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8.4 8.4 0 0111.31 0 8.43 8.43 0 012 5.69 8.6 8.6 0 01-1.77 5.38 7.6 7.6 0 01-5.89 2.51zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.8 3-2.8 4.26.31 4.23 2.83 4.23zM77.66 30c-5.74 0-7-3.25-7.23-4.52l4.6-.26c.41.91 1.17 1.41 2.76 1.41a2.45 2.45 0 002.82-2.53v-2.68a7 7 0 01-1.7 1.75 6.12 6.12 0 01-5.85-.08c-2.41-1.37-3-4.25-3-6.66 0-.89.12-3.67 1.45-5.42a5.67 5.67 0 014.64-2.4c1.2 0 3 .25 4.46 2.82V8.81h4.85v15.33a5.2 5.2 0 01-2.12 4.32A9.92 9.92 0 0177.66 30zm.15-9.66c2.53 0 2.81-2.69 2.81-3.91s-.31-4-2.81-4-2.81 2.8-2.81 4 .27 3.91 2.81 3.91zM55.56 3.72h9.81v2.41h-9.81z" fill="var(--color-contrast-higher)"/><circle cx="15" cy="15" r="15" fill="var(--color-primary)"/></svg> -->
         </a>
     
         <button class="reset anim-menu-btn js-anim-menu-btn f-header__nav-control js-tab-focus" aria-label="Toggle menu">
@@ -29,78 +30,99 @@
         <div class="f-header__nav-grid justify-between@md container max-width-lg">
           <div class="f-header__nav-logo-wrapper flex-grow flex-basis-0">
             <a href="#0" class="f-header__logo">
-              <svg width="104" height="30" viewBox="0 0 104 30"><title>Go to homepage</title><path d="M37.54 24.08V3.72h4.92v16.37h8.47v4zM60.47 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8 8 0 015.64-2.18 8.07 8.07 0 015.68 2.2 8.49 8.49 0 012 5.69 8.63 8.63 0 01-1.78 5.38 7.6 7.6 0 01-5.89 2.49zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.79 3-2.79 4.26.32 4.23 2.82 4.23zM95.49 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8.4 8.4 0 0111.31 0 8.43 8.43 0 012 5.69 8.6 8.6 0 01-1.77 5.38 7.6 7.6 0 01-5.89 2.51zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.8 3-2.8 4.26.31 4.23 2.83 4.23zM77.66 30c-5.74 0-7-3.25-7.23-4.52l4.6-.26c.41.91 1.17 1.41 2.76 1.41a2.45 2.45 0 002.82-2.53v-2.68a7 7 0 01-1.7 1.75 6.12 6.12 0 01-5.85-.08c-2.41-1.37-3-4.25-3-6.66 0-.89.12-3.67 1.45-5.42a5.67 5.67 0 014.64-2.4c1.2 0 3 .25 4.46 2.82V8.81h4.85v15.33a5.2 5.2 0 01-2.12 4.32A9.92 9.92 0 0177.66 30zm.15-9.66c2.53 0 2.81-2.69 2.81-3.91s-.31-4-2.81-4-2.81 2.8-2.81 4 .27 3.91 2.81 3.91zM55.56 3.72h9.81v2.41h-9.81z" fill="var(--color-contrast-higher)"/><circle cx="15" cy="15" r="15" fill="var(--color-primary)"/></svg>
+              <img src="assets/img/logo/thehienlogo.jpg"/>
+              <!-- <svg width="104" height="30" viewBox="0 0 104 30"><title>Go to homepage</title><path d="M37.54 24.08V3.72h4.92v16.37h8.47v4zM60.47 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8 8 0 015.64-2.18 8.07 8.07 0 015.68 2.2 8.49 8.49 0 012 5.69 8.63 8.63 0 01-1.78 5.38 7.6 7.6 0 01-5.89 2.49zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.79 3-2.79 4.26.32 4.23 2.82 4.23zM95.49 24.37a7.82 7.82 0 01-5.73-2.25 8.36 8.36 0 01-2-5.62 8.32 8.32 0 012.08-5.71 8.4 8.4 0 0111.31 0 8.43 8.43 0 012 5.69 8.6 8.6 0 01-1.77 5.38 7.6 7.6 0 01-5.89 2.51zm0-3.67c2.42 0 2.73-3 2.73-4.23s-.31-4.26-2.73-4.26-2.8 3-2.8 4.26.31 4.23 2.83 4.23zM77.66 30c-5.74 0-7-3.25-7.23-4.52l4.6-.26c.41.91 1.17 1.41 2.76 1.41a2.45 2.45 0 002.82-2.53v-2.68a7 7 0 01-1.7 1.75 6.12 6.12 0 01-5.85-.08c-2.41-1.37-3-4.25-3-6.66 0-.89.12-3.67 1.45-5.42a5.67 5.67 0 014.64-2.4c1.2 0 3 .25 4.46 2.82V8.81h4.85v15.33a5.2 5.2 0 01-2.12 4.32A9.92 9.92 0 0177.66 30zm.15-9.66c2.53 0 2.81-2.69 2.81-3.91s-.31-4-2.81-4-2.81 2.8-2.81 4 .27 3.91 2.81 3.91zM55.56 3.72h9.81v2.41h-9.81z" fill="var(--color-contrast-higher)"/><circle cx="15" cy="15" r="15" fill="var(--color-primary)"/></svg> -->
             </a>
           </div>
       
           <ul class="f-header__list flex-grow flex-basis-0 justify-center@md">
             <li class="f-header__item"><a href="#0" class="f-header__link" aria-current="page">Trang Chủ</a></li>
             <li class="f-header__item"><a href="#0" class="f-header__link">Giới Thiệu</a></li>
-            <li class="f-header__item">
-              <a href="#0" class="f-header__link">
-                <span>Sản Phẩm</span>
-                <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M6,9l4-5H2Z"/></svg>
-              </a>
-              <ul class="f-header__dropdown">
-                <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item One</a></li>
-                <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item Two</a></li>
-                <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item Three</a></li>
-                <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item Four</a></li>
-                <li><a href="#0" class="f-header__dropdown-link">Sub Nav Item Five</a></li>
-              </ul>
-            </li>
-
+            
             <li class="f-header__item">
               <div class="dropdown inline-block js-dropdown">
                 <div class="dropdown__wrapper">
-                  <a class="dropdown__trigger inline-flex items-center js-dropdown__trigger"  href="#0">
-                    <span>Dự Án</span>
-                    <svg class="f-header__dropdown-icon icon dropdown__trigger" aria-hidden="true" viewBox="0 0 12 12"><path d="M6,9l4-5H2Z"/></svg>
+                  <a class="dropdown__trigger inline-flex items-center js-dropdown__trigger f-header__link" href="#0">
+                    <span>Sản Phẩm</span>
+                    <svg class="f-header__dropdown-icon icon dropdown__trigger" aria-hidden="false" viewBox="0 0 12 12"><path d="M6,9l4-5H2Z"/></svg>
                   </a>
+
                   <ul class="dropdown__menu js-dropdown__menu" aria-label="dropdown">
-                    <li>
-                      <a class="dropdown__item" href="#0">Item One</a>
-                    </li>
-              
-                    <li>
-                      <a class="dropdown__item" href="#0">Item Two</a>
-                    </li>
-              
                     <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper">
-                      <a class="dropdown__item" href="#0">
-                        Item Three
-                        <svg class="icon" aria-hidden="true" viewBox="0 0 12 12"><polyline stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" points="3.5 0.5 9.5 6 3.5 11.5"></polyline></svg>
+                      <a class="dropdown__item" href="#0">CỬA NHÔM KÍNH<svg class="icon" aria-hidden="true" viewBox="0 0 12 12"><polyline stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" points="3.5 0.5 9.5 6 3.5 11.5"></polyline></svg>
                       </a>
               
                       <ul class="dropdown__menu js-dropdown__menu" aria-label="submenu">
-                        <li><a class="dropdown__item" href="#0">Sub Item One</a></li>
-                        <li><a class="dropdown__item" href="#0">Sub Item Two</a></li>
-                        <li><a class="dropdown__item" href="#0">Sub Item Three</a></li>
+                        <li><a class="dropdown__item" href="#0">Cửa đi bản lề sàn</a></li>
+                        <li><a class="dropdown__item" href="#0">Cửa sổ</a></li>
+                        <li><a class="dropdown__item" href="#0">Cửa lùa xếp</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper">
+                      <a class="dropdown__item" href="#0">Nhôm &amp; Kính<svg class="icon" aria-hidden="true" viewBox="0 0 12 12"><polyline stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" points="3.5 0.5 9.5 6 3.5 11.5"></polyline></svg>
+                      </a>
+              
+                      <ul class="dropdown__menu js-dropdown__menu" aria-label="submenu">
+                        <li><a class="dropdown__item" href="#0">Lam nhôm trang trí</a></li>
+                        <li><a class="dropdown__item" href="#0">Trần nhôm</a></li>
+                        <li><a class="dropdown__item" href="#0">Mặt dựng</a></li>
+                        <li><a class="dropdown__item" href="#0">Mặt dựng</a></li>
+                        <li><a class="dropdown__item" href="#0">Tấm ốp nhôm</a></li>
+                        <li><a class="dropdown__item" href="#0">Nhà tắm kính</a></li>
+                        <li><a class="dropdown__item" href="#0">Mái kính cường lực</a></li>
+                        <li><a class="dropdown__item" href="#0">Compact</a></li>
+                        <li><a class="dropdown__item" href="#0">Alu</a></li>
                       </ul>
                     </li>
               
-                    <li>
-                      <a class="dropdown__item" href="#0">Item Four</a>
+                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper">
+                      <a class="dropdown__item" href="#0">NHÔM &amp; KÍNH<svg class="icon" aria-hidden="true" viewBox="0 0 12 12"><polyline stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" points="3.5 0.5 9.5 6 3.5 11.5"></polyline></svg>
+                      </a>
+                      <ul class="dropdown__menu js-dropdown__menu" aria-label="submenu">
+                        <li><a class="dropdown__item" href="#0">Lam chắn nắng</a></li>
+                        <li><a class="dropdown__item" href="#0">Vách kính</a></li>
+                        <li><a class="dropdown__item" href="#0">Vách kính nhà tắm</a></li>
+                        <li><a class="dropdown__item" href="#0">Cầu thang kính</a></li>
+                        <li><a class="dropdown__item" href="#0">Lan can kính cường lực</a></li>
+                        <li><a class="dropdown__item" href="#0">Lam chắn nóng</a></li>
+                      </ul>
                     </li>
               
                     <hr class="dropdown__separator" role="separator">
               
-                    <li>
-                      <a class="dropdown__item" href="#0">Item Five</a>
+                    <li class="dropdown__sub-wrapper js-dropdown__sub-wrapper">
+                      <a class="dropdown__item" href="#0">MẶT DỰNG<svg class="icon" aria-hidden="true" viewBox="0 0 12 12"><polyline stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" points="3.5 0.5 9.5 6 3.5 11.5"></polyline></svg>
+                      </a>
+                      <ul class="dropdown__menu js-dropdown__menu" aria-label="submenu">
+                        <li><a class="dropdown__item" href="#0">Mặt dựng hệ Semi</a></li>
+                        <li><a class="dropdown__item" href="#0">Mặt dựng hệ Spider</a></li>
+                        <li><a class="dropdown__item" href="#0">Mặt dựng hệ Stick</a></li>
+                        <li><a class="dropdown__item" href="#0">Mặt dựng hệ Unitized</a></li>
+                      </ul>
                     </li>
                   </ul>
                 </div>
               </div>
             </li>
 
-            <li class="f-header__item"><a href="#0" class="f-header__link">Dự Án</a></li>
+            <li class="f-header__item">
+              <a href="#0" class="f-header__link">
+                <span>Dự Án</span>
+                <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12"><path d="M6,9l4-5H2Z"/></svg>
+              </a>
+              <ul class="f-header__dropdown">
+                <li><a href="#0" class="f-header__dropdown-link">Công trình Công nghiệp</a></li>
+                <li><a href="#0" class="f-header__dropdown-link">Biệt thự - Nhà phố</a></li>
+              </ul>
+            </li>            
+
             <li class="f-header__item"><a href="#0" class="f-header__link">Tin Tức</a></li>
             <li class="f-header__item"><a href="#0" class="f-header__link">Liên Hệ</a></li>
           </ul>
       
           <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
             <li class="f-header__item">
-              <a href="#0" class="f-header__link f-header__link--icon" aria-label="Follow us on Twitter">
+              <a href="#0" class="f-header__link f-header__link--icon contact-group " aria-label="Follow us on Twitter">
                 <svg class="icon" viewBox="0 0 32 32"><g><path d="M32,6.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.7,3.8,24,3,22.2,3 c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5C10.3,10.8,5.5,8.2,2.2,4.2c-0.6,1-0.9,2.1-0.9,3.3c0,2.3,1.2,4.3,2.9,5.5 c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1C2.9,27.9,6.4,29,10.1,29c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C30,8.5,31.1,7.4,32,6.1z"></path></g></svg>
                 <span class="margin-left-xxs">Hotline: 0988 471 934</span>
               </a>
@@ -109,7 +131,6 @@
         </div>
       </div>
     </header>
-
     <!--Intro-->
     <!-- <section class="hero hero--overlay-layer position-relative padding-y-xxl" style="background-image: url('assets/img/banner/hero-img-2.jpg');">
       
@@ -127,66 +148,85 @@
         </div>
       </div>
     </section> -->
+  <section class="hero position-relative">
+      <div class="slideshow js-slideshow slideshow--transition-prx" data-swipe="on" data-autoplay="on">
+        <p class="sr-only">Slideshow Items</p>
+        
+        <ul class="slideshow__content">
+          
+          <li class="slideshow__item bg js-slideshow__item">
+            <!-- <div class='container max-width-sm'>
+              <div class='text-component'>
+                <h1>Slide Number One</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quo dolores dolor reprehenderit iure laborum atque.</p>
+              </div>
+            </div> -->
+            <div class="feature-v9">
+              <div class="grid min-width-100vw min-height-100vh">
+                <div class="feature-v9__block col-6@md" style="background-image: url('assets/img/banner/bn4.jpg');">
+                  <div class="feature-v9__content text-component">
+                    <h2 class="text-xxl color-inherit">CHÚNG TÔI</h2>
+                    <h4 class="opacity-90% color-inherit">Chuyên cung cấp - thiết kế &amp; thi công <strong>nhôm kính</strong> cho các công trình Dân dụng và Công nghiệp</h4>
+                  </div>
+                </div>
+            
+                <div class="feature-v9__block col-6@md" style="background-image: url('assets/img/banner/bn5.jpg');">
+                  <div class="feature-v9__content  text-component">
+                    <h2 class="text-xxl color-inherit">"UY TÍN – CHẤT LƯỢNG – TIẾN ĐỘ - TRÁCH NHIỆM"</h2>
+                    <h4 class="opacity-90% color-inherit">Cam kết là lựa chọn tin cậy của Khách hàng</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-    <div class="slideshow js-slideshow slideshow--transition-prx" data-swipe="on" data-autoplay="on">
-      <p class="sr-only">Slideshow Items</p>
+          </li>
+          
+          <li class="slideshow__item bg js-slideshow__item" style="background-image: url('assets/img/banner/hero-img-2.jpg');">
+            <div class="container max-width-adaptive-md position-relative z-index-2">
+              <div class="max-width-xs">
+                <div class="feature-v9__content  text-component">
+                  <h2 class="text-xxl">CÔNG TY TNHH NHÔM KÍNH THẾ HIỂN</h2>
+                  <h4 class="opacity-90%">Nhà thầu thi công nhôm kính hàng đầu Việt Nam</h4>
+                </div>
+                <!-- <div class="text-component margin-bottom-sm">
+                  <h1>CÔNG TY TNHH NHÔM KÍNH THẾ HIỂN</h1>
+                  <h5>Nhà thầu thi công nhôm kính hàng đầu Việt Nam</h5>
+                </div> -->
+              </div>
+            </div>
+          </li>
+          
+          <li class="slideshow__item bg js-slideshow__item">
+            <div class='container max-width-sm'>
+              <div class='text-component text-center'>
+                <h1>Slide Three</h1>
+              </div>
+            </div>
+          </li>
+          
+        </ul>
       
-      <ul class="slideshow__content">
-        
-        <li class="slideshow__item bg js-slideshow__item">
-          <div class='container max-width-sm'>
-            <div class='text-component'>
-              <h1>Slide Number One</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quo dolores dolor reprehenderit iure laborum atque.</p>
-            </div>
-          </div>
-        </li>
-        
-        <li class="slideshow__item bg js-slideshow__item" style="background-image: url('assets/img/banner/hero-img-2.jpg');">
-          <div class="container max-width-adaptive-md position-relative z-index-2">
-            <div class="max-width-xs">
-              <div class="text-sm opacity-60% margin-bottom-xxs">This is a Label</div>
-              <div class="text-component margin-bottom-sm">
-                <h1>CÔNG TY TNHH NHÔM KÍNH THẾ HIỂN</h1>
-                <h5>Nhà thầu thi công nhôm kính hàng đầu Việt Nam</h5>
-              </div>
-              <div class="flex flex-wrap items-center gap-sm">
-                <a href="#0" class="btn btn--primary">Download</a>
-                <a href="#0" class="color-inherit">Learn more</a>
-              </div>
-            </div>
-          </div>
-        </li>
-        
-        <li class="slideshow__item bg js-slideshow__item">
-          <div class='container max-width-sm'>
-            <div class='text-component text-center'>
-              <h1>Slide Three</h1>
-            </div>
-          </div>
-        </li>
-        
-      </ul>
+        <ul>
+          <li class="slideshow__control js-slideshow__control">
+            <button class="reset slideshow__btn js-tab-focus">
+              <svg class="icon" viewBox="0 0 32 32"><title>Show previous slide</title><path d="M20.768,31.395L10.186,16.581c-0.248-0.348-0.248-0.814,0-1.162L20.768,0.605l1.627,1.162L12.229,16 l10.166,14.232L20.768,31.395z"></path></svg>
+            </button>
+          </li>
+      
+          <li class="slideshow__control js-slideshow__control">
+            <button class="reset slideshow__btn js-tab-focus">
+              <svg class="icon" viewBox="0 0 32 32"><title>Show next slide</title><path d="M11.232,31.395l-1.627-1.162L19.771,16L9.605,1.768l1.627-1.162l10.582,14.813 c0.248,0.348,0.248,0.814,0,1.162L11.232,31.395z"></path></svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+  </section>
     
-      <ul>
-        <li class="slideshow__control js-slideshow__control">
-          <button class="reset slideshow__btn js-tab-focus">
-            <svg class="icon" viewBox="0 0 32 32"><title>Show previous slide</title><path d="M20.768,31.395L10.186,16.581c-0.248-0.348-0.248-0.814,0-1.162L20.768,0.605l1.627,1.162L12.229,16 l10.166,14.232L20.768,31.395z"></path></svg>
-          </button>
-        </li>
-    
-        <li class="slideshow__control js-slideshow__control">
-          <button class="reset slideshow__btn js-tab-focus">
-            <svg class="icon" viewBox="0 0 32 32"><title>Show next slide</title><path d="M11.232,31.395l-1.627-1.162L19.771,16L9.605,1.768l1.627-1.162l10.582,14.813 c0.248,0.348,0.248,0.814,0,1.162L11.232,31.395z"></path></svg>
-          </button>
-        </li>
-      </ul>
-    </div>
   </section>
 
   <!--Content-->
   <section class="revealing-section bg z-index-1 js-revealing-section">
-    <div class="container max-width-sm padding-y-xl">
+    <div class="container max-width-adaptive-lg padding-y-xl">
       <div class="text-component line-height-lg v-space-md">
         <h1>New Content</h1>
     
@@ -203,6 +243,179 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nisi cumque error laudantium aperiam, beatae hic facere asperiores reprehenderit fugiat, illo ea. Magni, eaque? Ab, eos saepe cupiditate asperiores consequatur deleniti dolor aliquid veritatis enim magnam dolorum accusamus quos fuga iusto, unde aperiam itaque eligendi! Laboriosam deleniti expedita exercitationem quasi debitis saepe laudantium molestiae totam. Labore perferendis asperiores cupiditate consectetur excepturi dolorum nisi veritatis ratione, quas dolore explicabo molestiae dolor saepe eos id magni nemo ipsa fugit illo ab esse?</p>
       </div>
     </div>
+
+    <!--Du An Cong Nghiep-->
+    <div class="container max-width-adaptive-lg carousel flex flex-column js-carousel" data-drag="on" data-loop="off" data-navigation="on" data-navigation-class="carousel__navigation carousel__navigation--pagination order-3" data-navigation-pagination="on">
+      <p class="sr-only">Carousel items</p>
+    
+      <div class="carousel__wrapper order-2 overflow-hidden">
+        <ol class="carousel__list">
+          <li class="carousel__item">
+            
+            <div class="card-v10 card-v10--state-1 flex flex-center">
+              <a class="card-v10__img-link radius-lg shadow-lg" href="#0">
+                <img src="assets/img/projects/cn/1.xinguang/xinguang-1.jpg" alt="Xingguang Project">
+              </a>
+            
+              <div class="card-v10__content-wrapper">
+                <div class="card-v10__content bg shadow-xs radius-lg">
+                  <div class="card-v10__body">
+                    <p class="card-v10__label text-uppercase color-primary letter-spacing-md">Đơn vị thi công nhôm kính:  <strong>Công ty TNHH Nhôm Kính Thế Hiển</p>
+            
+                    <div class="text-component">
+                      <p class="card-v10__title"><a class="color-contrast-higher" href="#0">CÔNG TY TNHH LOGISTICS EQUIPMENT XINGUANG (VIETNAM)</a></p>
+                      <p class="card-v10__excerpt color-contrast-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                  </div>
+            
+                  <footer class="card-v10__footer">
+                    <ul class="card-v10__social-list">
+                      <li class="card-v10__social-item">
+                        <button class="reset card-v10__social-btn radius-md js-tab-focus" aria-label="Like this content along with 120 other people">
+                          <svg class="icon" viewBox="0 0 12 12">
+                            <g>
+                              <path d="M11.045,2.011a3.345,3.345,0,0,0-4.792,0c-.075.075-.15.225-.225.3-.075-.074-.15-.224-.225-.3a3.345,3.345,0,0,0-4.792,0,3.345,3.345,0,0,0,0,4.792l5.017,4.718L11.045,6.8A3.484,3.484,0,0,0,11.045,2.011Z"></path>
+                            </g>
+                          </svg>
+            
+                          <span>120</span>
+                        </button>
+                      </li>
+            
+                      <li class="card-v10__social-item">
+                        <button class="reset card-v10__social-btn radius-md js-tab-focus" aria-label="Comment">
+                          <svg class="icon" viewBox="0 0 12 12">
+                            <g>
+                              <path d="M6,0C2.691,0,0,2.362,0,5.267s2.691,5.266,6,5.266a6.8,6.8,0,0,0,1.036-.079l2.725,1.485A.505.505,0,0,0,10,12a.5.5,0,0,0,.5-.5V8.711A4.893,4.893,0,0,0,12,5.267C12,2.362,9.309,0,6,0Z"></path>
+                            </g>
+                          </svg>
+            
+                          <span>Comment</span>
+                        </button>
+                      </li>
+            
+                      <li class="card-v10__social-item">
+                        <button class="reset card-v10__social-btn radius-md js-tab-focus" aria-label="Share">
+                          <svg class="icon" viewBox="0 0 12 12">
+                            <g>
+                              <path d="M6,4C2.975,4,0,5.8,0,11,1.575,8.45,3.6,8,6,8v3l6-5L6,1Z"></path>
+                            </g>
+                          </svg>
+            
+                          <span>Share</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </footer>
+                </div>
+              </div>
+            </div>
+            
+          </li>
+    
+          <li class="carousel__item">
+            <div class="bg-contrast-lower height-xxxxl flex flex-center text-md">2</div>
+          </li>
+    
+          <li class="carousel__item">
+            <div class="bg-contrast-lower height-xxxxl flex flex-center text-md">3</div>
+          </li>
+    
+          <li class="carousel__item">
+            <div class="bg-contrast-lower height-xxxxl flex flex-center text-md">4</div>
+          </li>
+    
+          <li class="carousel__item">
+            <div class="bg-contrast-lower height-xxxxl flex flex-center text-md">5</div>
+          </li>
+    
+          <li class="carousel__item">
+            <div class="bg-contrast-lower height-xxxxl flex flex-center text-md">6</div>
+          </li>
+    
+          <li class="carousel__item">
+            <div class="bg-contrast-lower height-xxxxl flex flex-center text-md">7</div>
+          </li>
+    
+          <li class="carousel__item">
+            <div class="bg-contrast-lower height-xxxxl flex flex-center text-md">8</div>
+          </li>
+    
+          <li class="carousel__item">
+            <div class="bg-contrast-lower height-xxxxl flex flex-center text-md">9</div>
+          </li>
+    
+          <li class="carousel__item">
+            <div class="bg-contrast-lower height-xxxxl flex flex-center text-md">10</div>
+          </li>
+    
+          <li class="carousel__item">
+            <div class="bg-contrast-lower height-xxxxl flex flex-center text-md">11</div>
+          </li>
+    
+          <li class="carousel__item">
+            <div class="bg-contrast-lower height-xxxxl flex flex-center text-md">12</div>
+          </li>
+        </ol>
+      </div>
+    
+      <nav class="margin-bottom-xs order-1 no-js:is-hidden">
+        <ul class="flex gap-xxxs justify-end">
+          <li>
+            <button class="reset carousel__control carousel__control--prev js-carousel__control js-tab-focus">
+              <svg class="icon" viewBox="0 0 20 20">
+                <title>Show previous items</title>
+                <polyline points="13 18 5 10 13 2" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" />
+              </svg>
+            </button>
+          </li>
+    
+          <li>
+            <button class="reset carousel__control carousel__control--next js-carousel__control js-tab-focus">
+              <svg class="icon" viewBox="0 0 20 20">
+                <title>Show next items</title>
+                <polyline points="7 18 15 10 7 2" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2" />
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    
+    </div>
+
+    <!--Du An-->
+    <section class="feature-v10 ">
+      <div class="padding-y-xl padding-top-xxl@md padding-bottom-0@md">
+        <div class="container max-width-adaptive-lg">
+          <h2>Dự án</h2>
+          <div class="grid">
+            <img class="block width-100% object-cover col-6@md" src="assets/img/projects/cn/h1.jpg" alt="Du An Cong Nghiep">
+    
+            <div class="bg-contrast-lower col-6@md">
+              <div class="text-component v-space-md height-100% flex flex-column padding-md">
+                <h2>Công trình Công nghiệp</h2>
+                <p class="margin-top-auto"><a href="#0" class="feature-v10__link"><i>Xem chi tiết</i></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="bg-contrast-higher padding-y-xl padding-bottom-xxl@md padding-top-0@md">
+        <div class="container max-width-adaptive-lg">
+          <div class="grid">
+            <img class="block width-100% object-cover col-6@md order-2@md" src="assets/img/projects/dd/h1.jpg" alt="Cong Trinh Biet Thu Nha Pho">
+    
+            <div class="bg-contrast-high col-6@md order-1@md">
+              <div class="text-component color-bg v-space-md height-100% flex flex-column padding-md">
+                <h2 class="color-inherit">Công trình Biệt thự - Nhà phố</h2>
+                <p class="margin-top-auto"><a href="#0" class="feature-v10__link"><i>Xem chi tiết</i></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </section>
 
   <!--Back to top-->
