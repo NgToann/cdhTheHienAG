@@ -9,12 +9,12 @@
   <script>
     if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) {var cfStyle = document.getElementById('codyframe');if(cfStyle) {var href = cfStyle.getAttribute('href');href = href.replace('style.css', 'style-fallback.css');cfStyle.setAttribute('href', href);}}
   </script>
-  <title>Công ty Thế Hiển | Cung Cấp - Thiết kế &amp; Thi công Nhôm Kính</title>
+  <title>Công ty Thế Hiển | Cung Cấp - Thiết kế &amp; Đơn vị TCNK</title>
 </head>
 <body>
   <section class="position-relative z-index-2 bg shadow-sm">
     <!--Header-->
-    <header class="f-header position-relative js-f-header">
+    <header class="f-header position-relative js-f-header text-shadow-xs">
       <div class="f-header__mobile-content container max-width-lg">
         <a href="#0" class="f-header__logo">
           <img src="assets/img/logo/thehienlogo.jpg"/>
@@ -37,7 +37,7 @@
       
           <ul class="f-header__list flex-grow flex-basis-0 justify-center@md">
             <li class="f-header__item"><a href="#0" class="f-header__link" aria-current="page">Trang Chủ</a></li>
-            <li class="f-header__item"><a href="#0" class="f-header__link">Giới Thiệu</a></li>
+            <li class="f-header__item js-smooth-scroll" data-duration="200"><a href="#intro" class="f-header__link">Giới Thiệu</a></li>
             
             <li class="f-header__item">
               <div class="dropdown inline-block js-dropdown">
@@ -121,7 +121,7 @@
           </ul>
       
           <ul class="f-header__list flex-grow flex-basis-0 justify-end@md">
-            <li class="f-header__item bg-contrast-lower radius-md shadow-sm padding-x-sm">
+            <li class="f-header__item radius-lg shadow-sm padding-xs">
               <a href="#0" class="f-header__link f-header__link--icon contact-group " aria-label="Contact us">
                 <!-- <svg class="icon" viewBox="0 0 32 32"><g><path d="M32,6.1c-1.2,0.5-2.4,0.9-3.8,1c1.4-0.8,2.4-2.1,2.9-3.6c-1.3,0.8-2.7,1.3-4.2,1.6C25.7,3.8,24,3,22.2,3 c-3.6,0-6.6,2.9-6.6,6.6c0,0.5,0.1,1,0.2,1.5C10.3,10.8,5.5,8.2,2.2,4.2c-0.6,1-0.9,2.1-0.9,3.3c0,2.3,1.2,4.3,2.9,5.5 c-1.1,0-2.1-0.3-3-0.8c0,0,0,0.1,0,0.1c0,3.2,2.3,5.8,5.3,6.4c-0.6,0.1-1.1,0.2-1.7,0.2c-0.4,0-0.8,0-1.2-0.1 c0.8,2.6,3.3,4.5,6.1,4.6c-2.2,1.8-5.1,2.8-8.2,2.8c-0.5,0-1.1,0-1.6-0.1C2.9,27.9,6.4,29,10.1,29c12.1,0,18.7-10,18.7-18.7 c0-0.3,0-0.6,0-0.8C30,8.5,31.1,7.4,32,6.1z"></path></g></svg> -->
                 <svg viewBox="0 0 16 16" class="icon">
@@ -134,142 +134,272 @@
         </div>
       </div>
     </header>
-    <!--Intro-->
-    <!-- <section class="hero hero--overlay-layer position-relative padding-y-xxl" style="background-image: url('assets/img/banner/hero-img-2.jpg');">
-      
-      <div class="container max-width-adaptive-lg position-relative z-index-2">
-        <div class="max-width-xs">
-          <div class="text-sm opacity-60% margin-bottom-xxs">This is a Label</div>
-          <div class="text-component margin-bottom-sm">
-            <h1>CÔNG TY TNHH NHÔM KÍNH THẾ HIỂN</h1>
-            <h5>Nhà thầu thi công nhôm kính hàng đầu Việt Nam</h5>
-          </div>
-          <div class="flex flex-wrap items-center gap-sm">
-            <a href="#0" class="btn btn--primary">Download</a>
-            <a href="#0" class="color-inherit">Learn more</a>
-          </div>
-        </div>
-      </div>
-    </section> -->
-  <section class="hero position-relative">
-      <div class="slideshow js-slideshow slideshow--transition-prx" data-swipe="on" data-autoplay="off">
-        <p class="sr-only">Slideshow Items</p>
-        
-        <ul class="slideshow__content">
+    <!--Carousel-->
+    <section class="hero position-relative">
+        <div class="slideshow js-slideshow slideshow--transition-prx" data-swipe="on" data-autoplay="off">
+          <p class="sr-only">Slideshow Items</p>
           
-          <li class="slideshow__item bg js-slideshow__item" style="background-image: url('assets/img/banner/hero-img-2.jpg');">
-            <div class="container max-width-adaptive-md position-relative z-index-2">
-              <div class="max-width-xs">
-                <div class="feature-v9__content text-component">
-                  <h1>
-                    <span class="reveal-fx reveal-fx--text-mask text-shadow-lg" data-reveal-fx-delay="200"><i>CÔNG TY TNHH NHÔM KÍNH THẾ HIỂN</i></span>
-                  </h1>
-                  <h5>
-                    <span class="reveal-fx reveal-fx--text-mask color-black" data-reveal-fx-delay="250"><i>Nhà thầu thi công nhôm kính hàng đầu Việt Nam</i></span>
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <li class="slideshow__item bg js-slideshow__item">
-            <!-- <div class='container max-width-sm'>
-              <div class='text-component'>
-                <h1>Slide Number One</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quo dolores dolor reprehenderit iure laborum atque.</p>
-              </div>
-            </div> -->
-            <div class="feature-v9">
-              <div class="grid min-width-100vw min-height-100vh">
-                <div class="feature-v9__block col-6@md" style="background-image: url('assets/img/banner/bn4.jpg');">
-                  <div class="feature-v9__content text-component">
-                    <h2 class="text-lg color-inherit">CHÚNG TÔI</h2>
-                    <h4 class="opacity-90% color-inherit">Chuyên cung cấp - thiết kế &amp; thi công <strong>nhôm kính</strong> cho các công trình Dân dụng và Công nghiệp</h4>
-                  </div>
-                </div>
+          <ul class="slideshow__content">
             
-                <div class="feature-v9__block col-6@md" style="background-image: url('assets/img/banner/bn5.jpg');">
+            <li class="slideshow__item bg js-slideshow__item" style="background-image: url('assets/img/banner/hero-img-2.jpg');">
+              <div class="container max-width-adaptive-md position-relative z-index-2">
+                <div class="max-width-xs">
                   <div class="feature-v9__content text-component">
-                    <h2 class="text-lg color-inherit">"UY TÍN – CHẤT LƯỢNG – TIẾN ĐỘ - TRÁCH NHIỆM"</h2>
-                    <h4 class="opacity-90% color-inherit">Cam kết là lựa chọn tin cậy của Khách hàng</h4>
+                    <h1>
+                      <span class="reveal-fx reveal-fx--text-mask text-shadow-md" data-reveal-fx-delay="200"><i>CÔNG TY TNHH<br>NHÔM KÍNH THẾ HIỂN</i></span>
+                    </h1>
+                    <h5>
+                      <span class="reveal-fx reveal-fx--text-mask color-black text-shadow-md" data-reveal-fx-delay="250"><i>Nhà thầu thi công nhôm kính hàng đầu Việt Nam</i></span>
+                    </h5>
                   </div>
                 </div>
               </div>
-            </div>
-          </li>
-          
-          <li class="slideshow__item bg js-slideshow__item">
-            <div class='container max-width-sm'>
-              <div class='text-component text-center'>
-                <h1>Slide Three</h1>
+            </li>
+
+            <li class="slideshow__item bg js-slideshow__item">
+              <div class="feature-v9">
+                <div class="grid min-width-100vw min-height-100vh">
+                  <div class="feature-v9__block col-6@md" style="background-image: url('assets/img/banner/bn4.jpg');">
+                    <div class="feature-v9__content text-component">
+                      <h2 class="text-lg color-inherit">CHÚNG TÔI</h2>
+                      <h4 class="opacity-90% color-inherit">Chuyên cung cấp - thiết kế &amp; thi công <strong>nhôm kính</strong> cho các công trình Dân dụng và Công nghiệp</h4>
+                    </div>
+                  </div>
+              
+                  <div class="feature-v9__block col-6@md" style="background-image: url('assets/img/banner/bn5.jpg');">
+                    <div class="feature-v9__content text-component">
+                      <h2 class="text-lg color-inherit">"UY TÍN – CHẤT LƯỢNG – TIẾN ĐỘ - TRÁCH NHIỆM"</h2>
+                      <h4 class="opacity-90% color-inherit">Cam kết là lựa chọn tin cậy của Khách hàng</h4>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </li>
-          
-        </ul>
-      
-        <ul>
-          <li class="slideshow__control js-slideshow__control">
-            <button class="reset slideshow__btn js-tab-focus">
-              <svg class="icon" viewBox="0 0 32 32"><title>Show previous slide</title><path d="M20.768,31.395L10.186,16.581c-0.248-0.348-0.248-0.814,0-1.162L20.768,0.605l1.627,1.162L12.229,16 l10.166,14.232L20.768,31.395z"></path></svg>
-            </button>
-          </li>
-      
-          <li class="slideshow__control js-slideshow__control">
-            <button class="reset slideshow__btn js-tab-focus">
-              <svg class="icon" viewBox="0 0 32 32"><title>Show next slide</title><path d="M11.232,31.395l-1.627-1.162L19.771,16L9.605,1.768l1.627-1.162l10.582,14.813 c0.248,0.348,0.248,0.814,0,1.162L11.232,31.395z"></path></svg>
-            </button>
-          </li>
-        </ul>
-      </div>
-  </section>
-    
+            </li>
+            
+            <li class="slideshow__item bg js-slideshow__item">
+              <div class='container max-width-sm'>
+                <div class='text-component text-center'>
+                  <h1>Slide Three</h1>
+                </div>
+              </div>
+            </li>
+            
+          </ul>
+        
+          <ul>
+            <li class="slideshow__control js-slideshow__control">
+              <button class="reset slideshow__btn js-tab-focus">
+                <svg class="icon" viewBox="0 0 32 32"><title>Show previous slide</title><path d="M20.768,31.395L10.186,16.581c-0.248-0.348-0.248-0.814,0-1.162L20.768,0.605l1.627,1.162L12.229,16 l10.166,14.232L20.768,31.395z"></path></svg>
+              </button>
+            </li>
+        
+            <li class="slideshow__control js-slideshow__control">
+              <button class="reset slideshow__btn js-tab-focus">
+                <svg class="icon" viewBox="0 0 32 32"><title>Show next slide</title><path d="M11.232,31.395l-1.627-1.162L19.771,16L9.605,1.768l1.627-1.162l10.582,14.813 c0.248,0.348,0.248,0.814,0,1.162L11.232,31.395z"></path></svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+    </section>
   </section>
 
   <!--Content-->
   <section class="revealing-section bg z-index-1 js-revealing-section">
-    <section class="position-relative padding-y-xl">
-      <div class="position-relative z-index-2">
-        <div class="container max-width-lg">
-          <div class="grid gap-sm">
-            <div class="col-8@md">
-              <h1 class="text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum iure culpa repellendus.</h1>
+
+    <section id="intro" class="padding-y-xxl bg-contrast-lower">
+      <div class="margin-bottom-xs">
+        <h2 class="text-center">
+          <span class="reveal-fx reveal-fx--text-mask text-shadow-md" data-reveal-fx-delay="300"><i>Giới thiệu</i></span>
+        </h2>
+      </div>
+    
+      <div class="container max-width-adaptive-lg">
+        <div class="v-timeline v-timeline--icons js-v-timeline text-shadow-sm" data-animation="on">
+          <section class="v-timeline__section js-v-timeline__section">
+            <div class="v-timeline__marker bg-primary border border-3 border-bg shadow-xs" aria-hidden="true">
+              <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M22,1H2A1,1,0,0,0,1,2V22a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1V2A1,1,0,0,0,22,1ZM21,21H3V3H21Z"></path><path d="M6,19H18a1,1,0,0,0,.895-1.447l-4-8a1,1,0,0,0-.735-.54.984.984,0,0,0-.867.28l-8,8A1,1,0,0,0,6,19Z"></path><circle cx="8" cy="8" r="2"></circle></g></svg>
             </div>
-    
-            <div class="col-10 offset-2 col-8@lg padding-y-lg">
-              <div class="text-component line-height-lg v-space-lg">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta maxime, maiores reiciendis fuga animi, quidem similique perspiciatis neque doloremque ut veniam modi earum non iste assumenda voluptates impedit velit debitis, voluptas aspernatur dolore incidunt pariatur beatae?</p>
-    
-                <p class="bg-primary bg-opacity-10% padding-md border-left border-3 border-primary">Cum debitis aut voluptatum numquam architecto ratione unde, vitae neque facere obcaecati, quasi cupiditate pariatur delectus facilis in dignissimos dolor dolorem non doloremque repellat, ad officia. Non obcaecati eum exercitationem atque aspernatur illum, qui dolorum et sunt laborum iure saepe facere ullam. Non, deleniti!</p>
+      
+            <div class="v-timeline__items-group">
+              <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                <div class="v-timeline__date margin-bottom-sm">
+                  <time class="v-timeline__date-value" datetime="2016-12-07T00:00">Dec 07, 2016</time>
+                </div>
+      
+                <div class="text-component">
+                  <h2>Về chúng tôi</h2>
+                  <p>Hình thành trên nền tảng của các dịch vụ tư vấn, thiết kế và thi công các công trình công nghiệp, nhà phố, ...</p>
+                  <p>Hơn 20 năm làm việc gắn bó trong ngành nhôm kính. Năm 2016 công ty chính thức được hình thành với tâm huyết, sự tự hào và khát khao là một trong những nhà thầu nhôm kính uy tín hàng đầu Thế Giới.</p>
+                  <p>Với đội ngũ nhân viên có trình độ chuyên môn cao, lành nghề, giàu kinh ngiệm,
+                      nhiệt tình cùng trang thiết bị hiện đại có khả năng thi công các công trình cấp cao.
+                      Các công trình do công ty đã và đang thi công đều đạt chất lượng kỹ thuật cao, hoàn
+                      thành đúng tiến độ, được chủ đầu tư trong và ngoài nước đánh giá cao.</p>
+                </div>
+
+                <div class="margin-top-md">
+                  <a class="btn btn--primary" href="#0">Hồ sơ năng lực</a>
+                </div>
               </div>
             </div>
-    
-            <div class="col-12">
-              <footer class="border-top border-contrast-higher border-opacity-10% padding-top-sm">
-                <p class="text-sm text-right">Page One.</p>
-              </footer>
+          </section>
+          
+          <section class="v-timeline__section js-v-timeline__section">
+            <div class="v-timeline__marker bg-primary border border-3 border-bg shadow-xs" aria-hidden="true">
+              <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><title>o-warning</title><g><path d="M23.707,6.736,17.263.293A1,1,0,0,0,16.556,0H7.444a1,1,0,0,0-.707.293L.293,6.736A1,1,0,0,0,0,7.443v9.114a1,1,0,0,0,.293.707l6.444,6.443A1,1,0,0,0,7.444,24h9.112a1,1,0,0,0,.707-.293l6.444-6.443A1,1,0,0,0,24,16.557V7.443A1,1,0,0,0,23.707,6.736ZM13.645,5,13,14H11l-.608-9ZM12,20a2,2,0,1,1,2-2A2,2,0,0,1,12,20Z"></path></g></svg>
             </div>
-          </div>
-        </div>
-      </div>
+      
+            <div class="v-timeline__items-group">
+              <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                <div class="v-timeline__date margin-bottom-sm">
+                  <time class="v-timeline__date-value" datetime="2020-01-01T00:00">Jan 01, 2020</time>
+                </div>
+                <div class="text-component">
+                  <h2>Giới thiệu chung</h2>
+                  <p>Công ty TNHH Nhôm Kính Thế Hiển chính thức thành lập năm 2016.</p>
+                  <p>Trụ sở văn phòng được đặt tại: Tầng 8, tòa nhà Loyal, 151 Võ Thị Sáu, Phường 6, Quận 3, Tp. Hồ Chí Minh.</p>
+                  <p>Xưởng sản xuất: 29 đường TTN35, ấp Dân Thắng 1, xã Tân Thới Nhì, huyện Hóc Môn, Tp. Hồ Chí Minh.</p>
+                  <p>Từ những kinh nghiệm làm việc lâu năm với các Nhà Thầu chính trong nước, cũng như nước ngoài khó tính, có yêu cầu cao như Nhật Bản, Trung Quốc, Việt Nam…Chúng tôi đã và đang tiếp tục hoàn thiện, phát triển đội ngũ nhân lực ngày càng vững mạnh và có tay nghề chuyên môn cao.</p>
+                  <p>Hiện nay, chúng tôi đang sở hữu đội ngũ lao động có tay nghề cứng và gắn bó với công ty. Ngoài ra chúng tôi đang là trưởng ban hiệp hội liên kết các đội thầu khoán được chọn lọc, có uy tín, lành nghề nhất Tp. Hồ Chí Minh, đảm bảo được đáp ứng chất lượng cũng như tiến độ của Quý Khách Hàng.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="v-timeline__section js-v-timeline__section">
+            <div class="v-timeline__marker bg-accent border border-3 border-bg shadow-xs" aria-hidden="true">
+              <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M12,3A8.964,8.964,0,0,1,16,3.951a4,4,0,0,0-7.99,0A8.964,8.964,0,0,1,12,3Z"></path><path d="M24,7V6H22V7a2,2,0,0,1-2,2h-.589A7.992,7.992,0,0,0,4.589,9H4A2,2,0,0,1,2,7V6H0V7a4,4,0,0,0,4,4h.069A8.047,8.047,0,0,0,4,12v1H0v2H4v1a8.047,8.047,0,0,0,.069,1H4a4,4,0,0,0-4,4v1H2V21a2,2,0,0,1,2-2h.589a7.992,7.992,0,0,0,14.822,0H20a2,2,0,0,1,2,2v1h2V21a4,4,0,0,0-4-4h-.069A8.047,8.047,0,0,0,20,16V15h4V13H20V12a8.047,8.047,0,0,0-.069-1H20A4,4,0,0,0,24,7Z"></path></g></svg>
+            </div>
+      
+            <div class="v-timeline__items-group">
+              <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                <div class="v-timeline__date margin-bottom-sm">
+                  <time class="v-timeline__date-value" datetime="2020-01-01T00:00">Jan 01, 2020</time>
+                </div>
+      
+                <div class="text-component">
+                  <h3>Lĩnh vực - Ngành nghề kinh doanh</h3>
+                  <ul>
+                    <li>Tư vấn, thi công nhôm kinh trọn gói các công trình dân dụng như: Chung cư, trường học, nhà phố, biệt thự ...</li>
+                    <li class="margin-top-sm">Tư vấn, thi công nhôm kinh trọn gói các công trình công nghiệp như: Nhà xưởng, nhà máy sản xuất ...</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
     
-      <div class="grid-bg-fx z-index-1" aria-hidden="true">
-        <div class="container height-100% max-width-lg">
-          <div class="grid-bg-fx__grid grid gap-sm color-contrast-higher color-opacity-10%">
-            <div class="col-2"></div>
-            <div class="col-2"></div>
-            <div class="col-2"></div>
-            <div class="col-2"></div>
-            <div class="col-2"></div>
-            <div class="col-2"></div>
-          </div>
+          <section class="v-timeline__section js-v-timeline__section">
+            <div class="v-timeline__marker bg-contrast-high border border-3 border-bg shadow-xs" aria-hidden="true">
+              <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M2,0C1.448,0,1,0.448,1,1v22c0,0.552,0.448,1,1,1s1-0.448,1-1V1C3,0.448,2.552,0,2,0z"></path> <path d="M23,2H6C5.448,2,5,2.448,5,3v12c0,0.552,0.448,1,1,1h17l-3-7L23,2z"></path></g></svg>
+            </div>
+      
+            <div class="v-timeline__items-group">
+              <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                <div class="v-timeline__date margin-bottom-sm">
+                  <time class="v-timeline__date-value" datetime="2020-01-01T00:00">Jan 01, 2020</time>
+                </div>
+                <div class="text-component">
+                  <h3>Lời ngỏ</h3>
+                  <p>Trải qua hơn 20 năm làm việc liên tục và gắn bó trong ngành nhôm kính, năm 2016 Công ty TNHH Nhôm Kính Thế Hiển chính thức thành lập, với sự tâm huyết – tự hào - khát vọng là một trong những nhà thầu nhôm kính uy tín hàng đầu VN và khu vực, cống hiến cho xã hội những Công Trình có chất lượng thực sự. Chúng tôi luôn phát triển dựa trên nền tảng chất lượng là giá trị cốt lõi xuyên suốt mọi hoạt động của Doanh nghiệp. Và đó cũng chính là lời cam kết của chúng tôi.</p>
+                  <p>Nhân đây, chúng tôi xin gửi lời cảm ơn đến các Đối tác, Nhà Cung cấp và đội ngũ nhân viên của công ty đã tin tưởng, hợp tác và đồng hành cùng công ty trong suốt thời gian qua.</p>
+                  <p>Đặc biệt công ty Thế Hiển gởi lời biết ơn sâu sắc đến các Nhà Thầu chính: Chi Nhánh Công ty TNHH DaiWa House VN (Nhật Bản), Công ty TNHH Fujita VN, công ty cổ phần xây Dựng World Steel, Công ty CP Xây Dựng 105… và rất nhiều nhà thầu khác đã và đang tin tưởng, gắn bó với công ty Thế Hiển suốt từ những ngày đầu thành lập, luôn ưu tiên và lựa chọn Thế Hiển là thầu phụ uy tín, tin cậy của Quý Khách.</p>
+                  <p>Như một lời hứa, chúng tôi nhất định sẽ giữ vững niềm tin của Khách hàng dành cho chúng tôi và cam kết hoàn thành sứ mệnh công ty một cách xuất sắc nhất.</p>
+                  <figure class="text-component__block">
+                    <img src="assets/img/loingo.jpg" alt="Loi ngo">
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </section>
+    
+          <section class="v-timeline__section js-v-timeline__section">
+            <div class="v-timeline__marker bg-warning border border-3 border-bg shadow-xs" aria-hidden="true">
+              <svg class="icon icon--sm color-white" viewBox="0 0 24 24"><g><path d="M22,1H2A1,1,0,0,0,1,2V22a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1V2A1,1,0,0,0,22,1ZM21,21H3V3H21Z"></path><path d="M6,19H18a1,1,0,0,0,.895-1.447l-4-8a1,1,0,0,0-.735-.54.984.984,0,0,0-.867.28l-8,8A1,1,0,0,0,6,19Z"></path><circle cx="8" cy="8" r="2"></circle></g></svg>
+            </div>
+      
+            <div class="v-timeline__items-group">
+              <div class="v-timeline__item bg padding-md radius-md shadow-xs">
+                <div class="v-timeline__date margin-bottom-sm">
+                  <time class="v-timeline__date-value" datetime="2020-01-01T00:00">Jan 01, 2020</time>
+                </div>
+                <div class="text-component">
+                  <h3>TẦM NHÌN</h3>
+                  <p>Trở thành đơn vị cung cấp, thi công lắp đặt kiến trúc nhôm và kính hàng đầu ở Việt Nam và khu vực, có hệ thống kinh doanh phát triển, bền vững và thịnh vượng.</p>
+                </div>
+                <div class="text-component margin-top-sm">
+                  <h3>SỨ MỆNH</h3>
+                  <p>Cam kết mang đến chất lượng, giá trị bền vững, thẩm mỹ cho kiến trúc của công trình và đóng góp vào sự phát triển của xã hội.</p>
+                </div>
+                <div class="text-component margin-top-sm">
+                  <h3>GIÁ TRỊ CỐT LÕI</h3>
+                  <p><strong>CHẤT LƯỢNG – TRUNG THỰC – TRÁCH NHIỆM – TÂM HUYẾT – UY TÍN</strong></p>
+                </div>
+
+              </div>
+            </div>
+          </section>
         </div>
       </div>
+
+      <figure class="bg-decoration z-index-1" aria-hidden="true">
+        <svg class="bg-decoration__svg color-contrast-higher opacity-40%" viewBox="0 0 1920 450" fill="none">
+          <rect opacity="0.5" x="610.131" y="-440" width="128" height="836.003" transform="rotate(46.8712 610.131 -440)"
+            fill="url(#bg-decoration-v1-fx-5-linear-1)" />
+          <rect opacity="0.5" x="1899.13" y="-262" width="128" height="836.003" transform="rotate(46.8712 1899.13 -262)"
+            fill="url(#bg-decoration-v1-fx-5-linear-2)" />
+          <rect opacity="0.5" x="2076.13" y="-321" width="128" height="836.003" transform="rotate(46.8712 2076.13 -321)"
+            fill="url(#bg-decoration-v1-fx-5-linear-3)" />
+          <rect opacity="0.5" x="1294.5" y="40.3308" width="128" height="836.003"
+            transform="rotate(-132.518 1294.5 40.3308)" fill="url(#bg-decoration-v1-fx-5-linear-4)" />
+          <rect opacity="0.5" x="1866.13" y="-453" width="128" height="836.003" transform="rotate(46.8712 1866.13 -453)"
+            fill="url(#bg-decoration-v1-fx-5-linear-5)" />
+          <rect opacity="0.5" x="800.131" y="-418" width="128" height="836.003" transform="rotate(46.8712 800.131 -418)"
+            fill="url(#bg-decoration-v1-fx-5-linear-5)" />
+          <rect opacity="0.5" x="436.448" y="-251" width="76.1734" height="340.424" transform="rotate(46.8712 436.448 -251)"
+            fill="url(#bg-decoration-v1-fx-5-linear-7)" />
+          <defs>
+            <linearGradient id="bg-decoration-v1-fx-5-linear-1" x1="674.131" y1="-440" x2="674.131" y2="396.003"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="currentColor" />
+              <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="bg-decoration-v1-fx-5-linear-2" x1="1963.13" y1="-262" x2="1963.13" y2="574.003"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="currentColor" />
+              <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="bg-decoration-v1-fx-5-linear-3" x1="2140.13" y1="-321" x2="2140.13" y2="515.003"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="currentColor" />
+              <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="bg-decoration-v1-fx-5-linear-4" x1="1358.5" y1="40.3308" x2="1358.5" y2="876.334"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="currentColor" />
+              <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="bg-decoration-v1-fx-5-linear-5" x1="1930.13" y1="-453" x2="1930.13" y2="383.003"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="currentColor" />
+              <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="bg-decoration-v1-fx-5-linear-5" x1="864.131" y1="-418" x2="864.131" y2="418.003"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="currentColor" />
+              <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+            </linearGradient>
+            <linearGradient id="bg-decoration-v1-fx-5-linear-7" x1="474.534" y1="-251" x2="474.534" y2="89.4236"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="currentColor" stop-opacity="0" />
+              <stop offset="1" stop-color="currentColor" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </figure>
     </section>
 
     <!--Du An Cong Nghiep-->
     <section class="bg-contrast-lower padding-y-md">
-      <div class="container max-width-adaptive-md padding-y-md carousel flex flex-column js-carousel" data-drag="on" data-loop="off" data-navigation="on" data-navigation-class="carousel__navigation carousel__navigation--pagination order-3" data-navigation-pagination="on">
+      <div class="container max-width-adaptive-lg padding-y-md carousel flex flex-column js-carousel" data-drag="on" data-loop="off" data-navigation="on" data-navigation-class="carousel__navigation carousel__navigation--pagination order-3" data-navigation-pagination="on">
         <!-- <p class="sr-only">Du-an-cong-nghiep</p> -->
         <div class="carousel__wrapper order-2 padding-bottom-md overflow-hidden">
           <ol class="carousel__list">
@@ -303,7 +433,7 @@
                                 <path d="M6,4C2.975,4,0,5.8,0,11,1.575,8.45,3.6,8,6,8v3l6-5L6,1Z"></path>
                               </g>
                             </svg>
-                            <span>Thi công nhôm kính: <strong>Công ty TNHH Thế Hiển</strong></span>
+                            <span>Đơn vị TCNK: <strong>Công ty TNHH Thế Hiển</strong></span>
                           </button>
                         </li>
                       </ul>
@@ -342,7 +472,7 @@
                                 <path d="M6,4C2.975,4,0,5.8,0,11,1.575,8.45,3.6,8,6,8v3l6-5L6,1Z"></path>
                               </g>
                             </svg>
-                            <span>Thi công nhôm kính: <strong>Công ty TNHH Thế Hiển</strong></span>
+                            <span>Đơn vị TCNK: <strong>Công ty TNHH Thế Hiển</strong></span>
                           </button>
                         </li>
                       </ul>
@@ -381,7 +511,7 @@
                                 <path d="M6,4C2.975,4,0,5.8,0,11,1.575,8.45,3.6,8,6,8v3l6-5L6,1Z"></path>
                               </g>
                             </svg>
-                            <span>Thi công nhôm kính: <strong>Công ty TNHH Thế Hiển</strong></span>
+                            <span>Đơn vị TCNK: <strong>Công ty TNHH Thế Hiển</strong></span>
                           </button>
                         </li>
                       </ul>
@@ -420,7 +550,7 @@
                                 <path d="M6,4C2.975,4,0,5.8,0,11,1.575,8.45,3.6,8,6,8v3l6-5L6,1Z"></path>
                               </g>
                             </svg>
-                            <span>Thi công nhôm kính: <strong>Công ty TNHH Thế Hiển</strong></span>
+                            <span>Đơn vị TCNK: <strong>Công ty TNHH Thế Hiển</strong></span>
                           </button>
                         </li>
                       </ul>
@@ -459,7 +589,7 @@
                                 <path d="M6,4C2.975,4,0,5.8,0,11,1.575,8.45,3.6,8,6,8v3l6-5L6,1Z"></path>
                               </g>
                             </svg>
-                            <span>Thi công nhôm kính: <strong>Công ty TNHH Thế Hiển</strong></span>
+                            <span>Đơn vị TCNK: <strong>Công ty TNHH Thế Hiển</strong></span>
                           </button>
                         </li>
                       </ul>
@@ -499,7 +629,7 @@
                                 <path d="M6,4C2.975,4,0,5.8,0,11,1.575,8.45,3.6,8,6,8v3l6-5L6,1Z"></path>
                               </g>
                             </svg>
-                            <span>Thi công nhôm kính: <strong>Công ty TNHH Thế Hiển</strong></span>
+                            <span>Đơn vị TCNK: <strong>Công ty TNHH Thế Hiển</strong></span>
                           </button>
                         </li>
                       </ul>
@@ -539,7 +669,7 @@
                                 <path d="M6,4C2.975,4,0,5.8,0,11,1.575,8.45,3.6,8,6,8v3l6-5L6,1Z"></path>
                               </g>
                             </svg>
-                            <span>Thi công nhôm kính: <strong>Công ty TNHH Thế Hiển</strong></span>
+                            <span>Đơn vị TCNK: <strong>Công ty TNHH Thế Hiển</strong></span>
                           </button>
                         </li>
                       </ul>
@@ -579,7 +709,7 @@
                                 <path d="M6,4C2.975,4,0,5.8,0,11,1.575,8.45,3.6,8,6,8v3l6-5L6,1Z"></path>
                               </g>
                             </svg>
-                            <span>Thi công nhôm kính: <strong>Công ty TNHH Thế Hiển</strong></span>
+                            <span>Đơn vị TCNK: <strong>Công ty TNHH Thế Hiển</strong></span>
                           </button>
                         </li>
                       </ul>
@@ -619,7 +749,7 @@
                                 <path d="M6,4C2.975,4,0,5.8,0,11,1.575,8.45,3.6,8,6,8v3l6-5L6,1Z"></path>
                               </g>
                             </svg>
-                            <span>Thi công nhôm kính: <strong>Công ty TNHH Thế Hiển</strong></span>
+                            <span>Đơn vị TCNK: <strong>Công ty TNHH Thế Hiển</strong></span>
                           </button>
                         </li>
                       </ul>
@@ -659,7 +789,7 @@
                                 <path d="M6,4C2.975,4,0,5.8,0,11,1.575,8.45,3.6,8,6,8v3l6-5L6,1Z"></path>
                               </g>
                             </svg>
-                            <span>Thi công nhôm kính: <strong>Công ty TNHH Thế Hiển</strong></span>
+                            <span>Đơn vị TCNK: <strong>Công ty TNHH Thế Hiển</strong></span>
                           </button>
                         </li>
                       </ul>
@@ -698,7 +828,7 @@
                                 <path d="M6,4C2.975,4,0,5.8,0,11,1.575,8.45,3.6,8,6,8v3l6-5L6,1Z"></path>
                               </g>
                             </svg>
-                            <span>Thi công nhôm kính: <strong>Công ty TNHH Thế Hiển</strong></span>
+                            <span>Đơn vị TCNK: <strong>Công ty TNHH Thế Hiển</strong></span>
                           </button>
                         </li>
                       </ul>
@@ -737,7 +867,7 @@
                                 <path d="M6,4C2.975,4,0,5.8,0,11,1.575,8.45,3.6,8,6,8v3l6-5L6,1Z"></path>
                               </g>
                             </svg>
-                            <span>Thi công nhôm kính: <strong>Công ty TNHH Thế Hiển</strong></span>
+                            <span>Đơn vị TCNK: <strong>Công ty TNHH Thế Hiển</strong></span>
                           </button>
                         </li>
                       </ul>
@@ -778,8 +908,8 @@
     <!--Du An Dan Dung-->
     <section class="feature-v10 ">
       <div class="padding-y-xl padding-top-xxl@md padding-bottom-0@md">
-        <div class="container max-width-adaptive-md">
-          <h2>Dự án</h2>
+        <div class="container max-width-adaptive-lg">
+          <h2 class="margin-bottom-xs">Dự án</h2>
           <div class="grid">
             <img class="block width-100% object-cover col-6@md" src="assets/img/projects/cn/h1.jpg" alt="Du An Cong Nghiep">
     
@@ -794,7 +924,7 @@
       </div>
     
       <div class="bg-contrast-higher padding-y-xl padding-bottom-xxl@md padding-top-0@md">
-        <div class="container max-width-adaptive-md">
+        <div class="container max-width-adaptive-lg">
           <div class="grid">
             <img class="block width-100% object-cover col-6@md order-2@md" src="assets/img/projects/dd/h1.jpg" alt="Cong Trinh Biet Thu Nha Pho">
     
@@ -871,11 +1001,6 @@
       </div>
     </div>
   </section>
-  <!-- 
-    ⚠️ Make sure to include the Google Maps script right before your page body closing tag
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initGoogleMap"></script> 
-    Replace 'YOUR_API_KEY' with your google maps API key
-  -->
 
   <footer class="main-footer padding-y-lg">
     <div class="container max-width-lg">
