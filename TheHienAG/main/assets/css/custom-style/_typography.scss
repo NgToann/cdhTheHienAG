@@ -8,10 +8,10 @@
   --font-primary: system-ui, sans-serif;
 
   // font size
-  //--text-base-size: 1em; // body font-size
-  //--text-scale-ratio: 1.2; // multiplier used to generate the type scale values 👇
-  // --text-base-size: 1em;
-  // --text-scale-ratio: 1.2;
+  --text-base-size: 1em; // body font-size
+  --text-scale-ratio: 1.2; // multiplier used to generate the type scale values 👇
+  --text-base-size: 1em;
+  --text-scale-ratio: 1.2;
   
   // line-height
   --body-line-height: 1.4;
@@ -45,6 +45,10 @@
       // --text-scale-ratio: 1.2;
     }
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4 {

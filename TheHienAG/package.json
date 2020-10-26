@@ -42,5 +42,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CodyHouse/codyhouse-framework.git"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.0.0"
   }
 }

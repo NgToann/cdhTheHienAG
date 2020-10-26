@@ -70,6 +70,9 @@ Usage: codyhouse.co/license
     visibility: hidden;
     opacity: 0;
     transform: translateY(-1em);
+
+    font-size: 0.95em;
+    text-transform: uppercase;
   
     &::before { // top header bg + border
       content: '';
@@ -154,7 +157,8 @@ Usage: codyhouse.co/license
       
       // new style
       height: var(--f-header-height);
-      font-size: 0.875em; // edit font size of all nav elements
+      //font-size: 0.875em; // edit font size of all nav elements
+      font-size: 0.75em;
       box-shadow: var(--shadow-xs);
       z-index: var(--zindex-popover);
 
@@ -183,7 +187,7 @@ Usage: codyhouse.co/license
       position: relative;
       border-bottom: none;
       margin-right: var(--space-xs); // margin between nav items
-  
+
       &:last-child {
         margin-right: 0;
       }
@@ -228,6 +232,8 @@ Usage: codyhouse.co/license
       visibility: hidden;
       opacity: 0;
       transition: visibility .2s .2s, opacity .2s 0s;
+
+      //font-size: inherit;
   
       .f-header__item:hover & {
         visibility: visible;

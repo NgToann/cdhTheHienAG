@@ -1,10 +1,8 @@
 /* -------------------------------- 
-
 File#: _1_card-v10
 Title: Card v9
 Descr: Container of information used as teaser for further content exploration
 Usage: codyhouse.co/license
-
 -------------------------------- */
 
 /* #region (--state-1 & --state-2) */
@@ -63,11 +61,15 @@ Usage: codyhouse.co/license
   }
   
   .card-v10__title {
-    font-size: var(--text-md);
+    //font-size: var(--text-md);
+    //font-size: 1.25rem;
+    //font-size: var(--text-sm);
+    font-size: 1.15rem;
   }
   
   .card-v10__excerpt {
-    font-size: var(--text-sm);
+    //font-size: var(--text-xs);
+    font-size: 0.9rem;
   }
   
   .card-v10__footer {
@@ -78,7 +80,7 @@ Usage: codyhouse.co/license
   
   .card-v10__social-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: var(--space-xs);
     align-items: center;
   }
@@ -89,7 +91,8 @@ Usage: codyhouse.co/license
     justify-content: center;
     width: 100%;
     padding: var(--space-xxs);
-    font-size: var(--text-xs);
+    // font-size: var(--text-xs);
+    font-size: 0.75rem;
     transition: .2s;
   
     .icon {
@@ -137,7 +140,7 @@ Usage: codyhouse.co/license
       }
   
       .card-v10__title {
-        font-size: var(--text-xl);
+        font-size: var(--text-md);
       }
       
       .card-v10__excerpt {

@@ -644,6 +644,153 @@ function resetFocusTabsStyle() {
   }());
   
   
+// File#: _1_reveal-effects
+// Usage: codyhouse.co/license
+(function() {
+    var fxElements = document.getElementsByClassName('reveal-fx');
+    var intersectionObserverSupported = ('IntersectionObserver' in window && 'IntersectionObserverEntry' in window && 'intersectionRatio' in window.IntersectionObserverEntry.prototype);
+    if(fxElements.length > 0) {
+      // deactivate effect if Reduced Motion is enabled
+      if (Util.osHasReducedMotion() || !intersectionObserverSupported) {
+        fxRemoveClasses();
+        return;
+      }
+      //on small devices, do not animate elements -> reveal all
+      if( fxDisabled(fxElements[0]) ) {
+        fxRevealAll();
+        return;
+      }
+  
+      var fxRevealDelta = 120; // amount (in pixel) the element needs to enter the viewport to be revealed - if not custom value (data-reveal-fx-delta)
+      
+      var viewportHeight = window.innerHeight,
+        fxChecking = false,
+        fxRevealedItems = [],
+        fxElementDelays = fxGetDelays(), //elements animation delay
+        fxElementDeltas = fxGetDeltas(); // amount (in px) the element needs enter the viewport to be revealed (default value is fxRevealDelta) 
+      
+      
+      // add event listeners
+      window.addEventListener('load', fxReveal);
+      window.addEventListener('resize', fxResize);
+  
+      // observe reveal elements
+      var observer = [];
+      initObserver();
+  
+      function initObserver() {
+        for(var i = 0; i < fxElements.length; i++) {
+          observer[i] = new IntersectionObserver(
+            function(entries, observer) { 
+              if(entries[0].isIntersecting) {
+                fxRevealItemObserver(entries[0].target);
+                observer.unobserve(entries[0].target);
+              }
+            }, 
+            {rootMargin: "0px 0px -"+fxElementDeltas[i]+"px 0px"}
+          );
+    
+          observer[i].observe(fxElements[i]);
+        }
+      };
+  
+      function fxRevealAll() { // reveal all elements - small devices
+        for(var i = 0; i < fxElements.length; i++) {
+          Util.addClass(fxElements[i], 'reveal-fx--is-visible');
+        }
+      };
+  
+      function fxResize() { // on resize - check new window height and reveal visible elements
+        if(fxChecking) return;
+        fxChecking = true;
+        (!window.requestAnimationFrame) ? setTimeout(function(){fxReset();}, 250) : window.requestAnimationFrame(fxReset);
+      };
+  
+      function fxReset() {
+        viewportHeight = window.innerHeight;
+        fxReveal();
+      };
+  
+      function fxReveal() { // reveal visible elements
+        for(var i = 0; i < fxElements.length; i++) {(function(i){
+          if(fxRevealedItems.indexOf(i) != -1 ) return; //element has already been revelead
+          if(fxElementIsVisible(fxElements[i], i)) {
+            fxRevealItem(i);
+            fxRevealedItems.push(i);
+          }})(i); 
+        }
+        fxResetEvents(); 
+        fxChecking = false;
+      };
+  
+      function fxRevealItem(index) {
+        if(fxElementDelays[index] && fxElementDelays[index] != 0) {
+          // wait before revealing element if a delay was added
+          setTimeout(function(){
+            Util.addClass(fxElements[index], 'reveal-fx--is-visible');
+          }, fxElementDelays[index]);
+        } else {
+          Util.addClass(fxElements[index], 'reveal-fx--is-visible');
+        }
+      };
+  
+      function fxRevealItemObserver(item) {
+        var index = Util.getIndexInArray(fxElements, item);
+        if(fxRevealedItems.indexOf(index) != -1 ) return; //element has already been revelead
+        fxRevealItem(index);
+        fxRevealedItems.push(index);
+        fxResetEvents(); 
+        fxChecking = false;
+      };
+  
+      function fxGetDelays() { // get anmation delays
+        var delays = [];
+        for(var i = 0; i < fxElements.length; i++) {
+          delays.push( fxElements[i].getAttribute('data-reveal-fx-delay') ? parseInt(fxElements[i].getAttribute('data-reveal-fx-delay')) : 0);
+        }
+        return delays;
+      };
+  
+      function fxGetDeltas() { // get reveal delta
+        var deltas = [];
+        for(var i = 0; i < fxElements.length; i++) {
+          deltas.push( fxElements[i].getAttribute('data-reveal-fx-delta') ? parseInt(fxElements[i].getAttribute('data-reveal-fx-delta')) : fxRevealDelta);
+        }
+        return deltas;
+      };
+  
+      function fxDisabled(element) { // check if elements need to be animated - no animation on small devices
+        return !(window.getComputedStyle(element, '::before').getPropertyValue('content').replace(/'|"/g, "") == 'reveal-fx');
+      };
+  
+      function fxElementIsVisible(element, i) { // element is inside viewport
+        return (fxGetElementPosition(element) <= viewportHeight - fxElementDeltas[i]);
+      };
+  
+      function fxGetElementPosition(element) { // get top position of element
+        return element.getBoundingClientRect().top;
+      };
+  
+      function fxResetEvents() { 
+        if(fxElements.length > fxRevealedItems.length) return;
+        // remove event listeners if all elements have been revealed
+        window.removeEventListener('load', fxReveal);
+        window.removeEventListener('resize', fxResize);
+      };
+  
+      function fxRemoveClasses() {
+        // Reduced Motion on or Intersection Observer not supported
+        while(fxElements[0]) {
+          // remove all classes starting with 'reveal-fx--'
+          var classes = fxElements[0].getAttribute('class').split(" ").filter(function(c) {
+            return c.lastIndexOf('reveal-fx--', 0) !== 0;
+          });
+          fxElements[0].setAttribute('class', classes.join(" ").trim());
+          Util.removeClass(fxElements[0], 'reveal-fx');
+        }
+      };
+    }
+  }());
 // File#: _1_revealing-section
 // Usage: codyhouse.co/license
 (function() {
@@ -758,6 +905,105 @@ function resetFocusTabsStyle() {
           (function(i){revealingSectionArray[i].element.dispatchEvent(customEvent)})(i);
         };
       };
+    }
+  }());
+// File#: _1_smooth-scrolling
+// Usage: codyhouse.co/license
+(function() {
+    var SmoothScroll = function(element) {
+      if(!('CSS' in window) || !CSS.supports('color', 'var(--color-var)')) return;
+      this.element = element;
+      this.scrollDuration = parseInt(this.element.getAttribute('data-duration')) || 300;
+      this.dataElementY = this.element.getAttribute('data-scrollable-element-y') || this.element.getAttribute('data-scrollable-element') || this.element.getAttribute('data-element');
+      this.scrollElementY = this.dataElementY ? document.querySelector(this.dataElementY) : window;
+      this.dataElementX = this.element.getAttribute('data-scrollable-element-x');
+      this.scrollElementX = this.dataElementY ? document.querySelector(this.dataElementX) : window;
+      this.initScroll();
+    };
+  
+    SmoothScroll.prototype.initScroll = function() {
+      var self = this;
+  
+      //detect click on link
+      this.element.addEventListener('click', function(event){
+        event.preventDefault();
+        var targetId = event.target.closest('.js-smooth-scroll').getAttribute('href').replace('#', ''),
+          target = document.getElementById(targetId),
+          targetTabIndex = target.getAttribute('tabindex'),
+          windowScrollTop = self.scrollElementY.scrollTop || document.documentElement.scrollTop;
+  
+        // scroll vertically
+        if(!self.dataElementY) windowScrollTop = window.scrollY || document.documentElement.scrollTop;
+  
+        var scrollElementY = self.dataElementY ? self.scrollElementY : false;
+  
+        var fixedHeight = self.getFixedElementHeight(); // check if there's a fixed element on the page
+        Util.scrollTo(target.getBoundingClientRect().top + windowScrollTop - fixedHeight, self.scrollDuration, function() {
+          // scroll horizontally
+          self.scrollHorizontally(target, fixedHeight);
+          //move the focus to the target element - don't break keyboard navigation
+          Util.moveFocus(target);
+          history.pushState(false, false, '#'+targetId);
+          self.resetTarget(target, targetTabIndex);
+        }, scrollElementY);
+      });
+    };
+  
+    SmoothScroll.prototype.scrollHorizontally = function(target, delta) {
+      var scrollEl = this.dataElementX ? this.scrollElementX : false;
+      var windowScrollLeft = this.scrollElementX ? this.scrollElementX.scrollLeft : document.documentElement.scrollLeft;
+      var final = target.getBoundingClientRect().left + windowScrollLeft - delta,
+        duration = this.scrollDuration;
+  
+      var element = scrollEl || window;
+      var start = element.scrollLeft || document.documentElement.scrollLeft,
+        currentTime = null;
+  
+      if(!scrollEl) start = window.scrollX || document.documentElement.scrollLeft;
+      // return if there's no need to scroll
+      if(Math.abs(start - final) < 5) return;
+          
+      var animateScroll = function(timestamp){
+        if (!currentTime) currentTime = timestamp;        
+        var progress = timestamp - currentTime;
+        if(progress > duration) progress = duration;
+        var val = Math.easeInOutQuad(progress, start, final-start, duration);
+        element.scrollTo({
+          left: val,
+        });
+        if(progress < duration) {
+          window.requestAnimationFrame(animateScroll);
+        }
+      };
+  
+      window.requestAnimationFrame(animateScroll);
+    };
+  
+    SmoothScroll.prototype.resetTarget = function(target, tabindex) {
+      if( parseInt(target.getAttribute('tabindex')) < 0) {
+        target.style.outline = 'none';
+        !tabindex && target.removeAttribute('tabindex');
+      }	
+    };
+  
+    SmoothScroll.prototype.getFixedElementHeight = function() {
+      var scrollElementY = this.dataElementY ? this.scrollElementY : document.documentElement;
+      var fixedElementDelta = parseInt(getComputedStyle(scrollElementY).getPropertyValue('scroll-padding'));
+      if(isNaN(fixedElementDelta) ) { // scroll-padding not supported
+        fixedElementDelta = 0;
+        var fixedElement = document.querySelector(this.element.getAttribute('data-fixed-element'));
+        if(fixedElement) fixedElementDelta = parseInt(fixedElement.getBoundingClientRect().height);
+      }
+      return fixedElementDelta;
+    };
+    
+    //initialize the Smooth Scroll objects
+    var smoothScrollLinks = document.getElementsByClassName('js-smooth-scroll');
+    if( smoothScrollLinks.length > 0 && !Util.cssSupports('scroll-behavior', 'smooth') && window.requestAnimationFrame) {
+      // you need javascript only if css scroll-behavior is not supported
+      for( var i = 0; i < smoothScrollLinks.length; i++) {
+        (function(i){new SmoothScroll(smoothScrollLinks[i]);})(i);
+      }
     }
   }());
 // File#: _1_sticky-banner
