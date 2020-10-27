@@ -253,6 +253,10 @@ Usage: codyhouse.co/license
   }
 }
 
+.spanNormal {
+  text-transform: none !important;
+}
+
 html:not(.js) {
   .f-header__nav-control {
     display: none;

@@ -1,11 +1,10 @@
 /* -------------------------------- 
-
 File#: _2_slideshow
 Title: Slideshow
 Descr: Show a collection of items one at a time
 Usage: codyhouse.co/license
-
 -------------------------------- */
+
 :root {
     --slideshow-height: 280px;
   
@@ -346,7 +345,7 @@ Usage: codyhouse.co/license
   
     &:hover {
       background-color: alpha(var(--color-contrast-higher), 0.85);
-  
+      //background-color: orangered !important;
       .icon {
         color: var(--color-bg);
       }

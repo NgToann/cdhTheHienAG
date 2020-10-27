@@ -25,7 +25,8 @@ Usage: codyhouse.co/license
     background-repeat: no-repeat;
     background-position: center;
     padding: var(--space-xl) var(--space-md);
-    min-height: calc(100vh - var(f--header-height)) !important;
+    min-height: calc(100vh - var(--f-header-height)) !important;
+    //min-height: 100vh !important;
   
     &::before, &::after {
       content: '';
@@ -57,11 +58,14 @@ Usage: codyhouse.co/license
     }
   
     @include breakpoint(md) {
-      min-height: 600px;
+      min-height: 700px;
     }
   
     @include breakpoint(lg) {
-      min-height: 700px;
+      min-height: 1200px;
+    }
+    @include breakpoint(xl) {
+      min-height: 1900px;
     }
   }
   
