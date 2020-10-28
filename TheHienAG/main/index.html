@@ -66,7 +66,6 @@
                         <li><a class="dropdown__item" href="#0">Lam nhôm trang trí</a></li>
                         <li><a class="dropdown__item" href="#0">Trần nhôm</a></li>
                         <li><a class="dropdown__item" href="#0">Mặt dựng</a></li>
-                        <li><a class="dropdown__item" href="#0">Mặt dựng</a></li>
                         <li><a class="dropdown__item" href="#0">Tấm ốp nhôm</a></li>
                         <li><a class="dropdown__item" href="#0">Nhà tắm kính</a></li>
                         <li><a class="dropdown__item" href="#0">Mái kính cường lực</a></li>
@@ -134,6 +133,7 @@
         </div>
       </div>
     </header>
+
     <!--Carousel-->
     <section class="hero position-relative">
         <div class="slideshow js-slideshow slideshow--transition-prx" data-swipe="on" data-autoplay="off">
@@ -202,8 +202,8 @@
     </section>
   </section>
 
-  <!--Content-->
-  <section class="revealing-section bg z-index-1 js-revealing-section">
+  <!--Content js-revealing-section-->
+  <section class="revealing-section bg z-index-1">
     <!--Intro timeline-->
     <div class="position-relative z-index-1 overflow-hidden bg-contrast-lower padding-y-xxl">
       <div class="margin-bottom-xs">
@@ -407,13 +407,14 @@
     <section class="bg-contrast-lower padding-y-md">
       <div class="container max-width-adaptive-lg padding-y-md carousel flex flex-column js-carousel" data-drag="on" data-loop="off" data-navigation="on" data-navigation-class="carousel__navigation carousel__navigation--pagination order-3" data-navigation-pagination="on">
         <!-- <p class="sr-only">Du-an-cong-nghiep</p> -->
+        <h3 class="text-shadow-sm">Dự án công nghiệp</h3>
         <div class="carousel__wrapper order-2 padding-bottom-md overflow-hidden">
           <ol class="carousel__list">
   
             <!--XINGUANG-->
             <li class="carousel__item">
               <div class="card-v10 card-v10--state-1">
-                <a class="card-v10__img-link radius-md shadow-lg" href="#0">
+                <a class="card-v10__img-link radius-md shadow-lg" aria-controls="modal-name-xinguang">
                   <img src="assets/img/projects/cn/sample.jpg" alt="Image description">
                 </a>
               
@@ -448,7 +449,7 @@
                 </div>
               </div>
             </li>
-  
+
             <!--MINATO SEIKO-->
             <li class="carousel__item">
               <div class="card-v10 card-v10--state-1">
@@ -911,17 +912,58 @@
       </div>
     </section>
 
+    <!--Du An Cong Nghiep Detail-->
+    <div class="modal modal--animate-fade bg-contrast-higher bg-opacity-90% js-modal" id="modal-name-xinguang">
+      <div class="modal__content bg height-100% flex flex-column" role="alertdialog" aria-labelledby="modal-title-xinguang" aria-describedby="modal-description-xinguang">
+        <header class="bg-contrast-lower padding-y-sm padding-x-md flex items-center justify-between shadow-sm">
+          <h4 class="text-truncate" id="modal-title-xinguang">Dự án Xinguang</h4>
+          <button class="reset modal__close-btn modal__close-btn--inner js-modal__close js-tab-focus">
+            <svg class="icon" viewBox="0 0 20 20">
+              <title>Close window</title>
+              <g fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="2">
+                <line x1="3" y1="3" x2="17" y2="17" />
+                <line x1="17" y1="3" x2="3" y2="17" />
+              </g>
+            </svg>
+          </button>
+        </header>
+
+        <div class="padding-y-sm padding-x-md flex-grow overflow-auto">
+          <div class="text-component v-space-md line-height-lg">
+            <!-- <p id="modal-description-xinguang">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae culpa, inventore alias ab atque similique quod ea reprehenderit.</p> -->
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet accusantium provident nulla minus velit, voluptas voluptatem in libero hic quaerat saepe quae, labore, qui illo eum ullam ea. Repudiandae excepturi aut earum ipsa vitae modi, non eos hic? Atque fugit ullam est ab nam numquam id pariatur, esse voluptates, ipsa aperiam consequatur laboriosam perspiciatis. Nemo culpa reprehenderit tenetur alias dolor veritatis ducimus, numquam ipsa incidunt harum dolorem quod perspiciatis autem quis soluta, nobis assumenda aliquam perferendis ut commodi inventore sunt.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sunt eaque, veniam voluptatibus tempore iusto fugiat magnam aliquid maiores cum! Alias debitis facere delectus! Nulla minus unde placeat neque nam quibusdam consequatur et! Eligendi, architecto quo atque ut sint, eaque id facere dignissimos error sed tempore. Ex nam possimus dolorem numquam at, dolore a itaque voluptas veritatis eaque temporibus ipsam nemo animi esse reprehenderit odio sint delectus sequi ullam aliquid qui praesentium nesciunt repudiandae. Ipsa architecto sunt repellendus error dolorem.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sunt eaque, veniam voluptatibus tempore iusto fugiat magnam aliquid maiores cum! Alias debitis facere delectus! Nulla minus unde placeat neque nam quibusdam consequatur et! Eligendi, architecto quo atque ut sint, eaque id facere dignissimos error sed tempore. Ex nam possimus dolorem numquam at, dolore a itaque voluptas veritatis eaque temporibus ipsam nemo animi esse reprehenderit odio sint delectus sequi ullam aliquid qui praesentium nesciunt repudiandae. Ipsa architecto sunt repellendus error dolorem.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sunt eaque, veniam voluptatibus tempore iusto fugiat magnam aliquid maiores cum! Alias debitis facere delectus! Nulla minus unde placeat neque nam quibusdam consequatur et! Eligendi, architecto quo atque ut sint, eaque id facere dignissimos error sed tempore. Ex nam possimus dolorem numquam at, dolore a itaque voluptas veritatis eaque temporibus ipsam nemo animi esse reprehenderit odio sint delectus sequi ullam aliquid qui praesentium nesciunt repudiandae. Ipsa architecto sunt repellendus error dolorem.</p>
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid, aperiam. Doloribus nam perferendis earum at, modi ullam dolor voluptas quos? Autem explicabo, ab rerum mollitia, fugiat ipsam eligendi non eius ullam neque, atque at labore quisquam tempora id harum dolorum nisi quia molestias nam molestiae placeat laboriosam ipsa dolore. Veniam dicta temporibus sed cupiditate asperiores sunt labore minima velit id facere, delectus, mollitia ratione provident fugiat nulla distinctio in odit error tenetur eum! Est dolorum veritatis repudiandae excepturi iste adipisci at accusamus mollitia odit accusantium delectus deleniti recusandae consequuntur sunt dolores voluptatum dolor tempore modi consequatur numquam voluptates beatae non, optio hic. Similique sequi voluptas autem suscipit corrupti officia voluptatum sapiente, aliquam est odio praesentium. Doloribus fugit dolores voluptatum ad.</p>
+          </div>
+        </div>
+
+        <footer class="padding-y-sm padding-x-md bg shadow-md">
+          <div class="flex justify-end gap-xs">
+            <button class="btn btn--subtle js-modal__close">Close</button>
+          </div>
+        </footer>
+      </div>
+
+    </div>
+
     <!--Du An Dan Dung-->
     <section class="feature-v10 ">
       <div class="padding-y-xl padding-top-xxl@md padding-bottom-0@md">
         <div class="container max-width-adaptive-lg">
-          <h2 class="margin-bottom-xs">Dự án</h2>
+          <h3 class="margin-bottom-xs text-shadow-sm">Công trình dân dụng</h3>
           <div class="grid">
             <img class="block width-100% object-cover col-6@md" src="assets/img/projects/cn/h1.jpg" alt="Du An Cong Nghiep">
     
             <div class="bg-contrast-lower col-6@md">
               <div class="text-component v-space-md height-100% flex flex-column padding-md">
-                <h2>Công trình Công nghiệp</h2>
+                <h4>Công trình Công nghiệp</h4>
                 <p class="margin-top-auto"><a href="#0" class="feature-v10__link"><i>Xem chi tiết</i></a></p>
               </div>
             </div>
@@ -936,7 +978,7 @@
     
             <div class="bg-contrast-high col-6@md order-1@md">
               <div class="text-component color-bg v-space-md height-100% flex flex-column padding-md">
-                <h2 class="color-inherit">Công trình Biệt thự - Nhà phố</h2>
+                <h4 class="color-inherit">Công trình Biệt thự - Nhà phố</h4>
                 <p class="margin-top-auto"><a class="feature-v10__link" aria-controls="modal-full-width-bietthunhapho"><i>Xem chi tiết</i></a></p>
                 <div class="modal modal--animate-fade bg-contrast-higher js-modal color-black" id="modal-full-width-bietthunhapho">
                   <div class="modal__content bg height-100% flex flex-column" role="alertdialog" aria-labelledby="modal-title" aria-describedby="modal-description">
@@ -1103,8 +1145,8 @@
       </div>
     
       <div class="main-footer__colophon border-top padding-top-xs margin-top-lg">
-        <div class="text-sm text-xs@md color-contrast-medium flex flex-wrap gap-xs">
-          <span>&copy; Copyright nhomkinhthehien.com</span>
+        <div class="text-sm text-xs@md text-shadow-sm flex flex-wrap gap-xs">
+          <span>&copy; <a>Copyright nhomkinhthehien.com</a></span>
         </div>
       </div>
     </div>
@@ -1114,6 +1156,6 @@
   <a class="back-to-top js-back-to-top" href="#" data-offset="100" data-duration="200">
     <svg class="icon" viewBox="0 0 16 16"><title>Back to top</title><g stroke-width="1" stroke="currentColor"><polyline fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="15.5,11.5 8,4 0.5,11.5 "></polyline></g></svg>
   </a>
-<script src="assets/js/scripts.js"></script>
+<script src="assets/js/scripts.min.js"></script>
 </body>
 </html>
