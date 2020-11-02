@@ -31,7 +31,7 @@ Usage: codyhouse.co/license
       --slideshow-height: 580px;
     }
   }
-  
+
   // slide
   .slideshow__item {
     display: flex;
@@ -84,8 +84,8 @@ Usage: codyhouse.co/license
       width: 100%;
       visibility: hidden;
       min-height: calc(100vh - var(--f-header-height)) !important;
+      //max-height: 65vh !important;
     }
-  
     .slideshow__item--selected {
       position: relative;
       z-index: 3;
@@ -326,6 +326,7 @@ Usage: codyhouse.co/license
         right: var(--slideshow-btn-offset);
       }
     }
+
   
     @include breakpoint(md) {
       .slideshow[data-swipe="on"] .slideshow__control {

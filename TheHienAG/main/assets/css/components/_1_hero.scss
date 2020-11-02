@@ -1,19 +1,11 @@
-/* -------------------------------- 
-
-File#: _1_hero
-Title: Hero
-Descr: A full-width callout section
-Usage: codyhouse.co/license
-
--------------------------------- */
-
 .hero {
     // if bg = img
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     min-height: calc(100vh - var(--f-header-height));
-    //min-height: 100vh;    
+    //min-height: 100vh;
+    //max-height: 65vh !important;
   }
   
   // --overlay-layer
